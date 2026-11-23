@@ -1,0 +1,64 @@
+SCOREBOARD (the held-out book was never seen in training)
+
+                  vocab  tokens, training  tokens, held out  chars/token  <UNK> rate   ' strawberry'
+v1 alphabet         128         9,141,555            31,497         1.00       0.00%   [' ', 's', 't', 'r', 'a', 'w', 'b', 'e', 'r', 'r', 'y']
+v2 dictionary    54,622         2,137,445             7,831         4.02       1.35%   [' strawberry']
+v3 BPE            8,128         2,435,875             8,737         3.61       0.00%   [' straw', 'ber', 'ry']
+
+BPE: 8,000 merges in 29.1s; ' strawberry' reached [' straw', 'ber', 'ry'] at merge 5,019
+
+REAL TOKENIZERS                          ' strawberry'                 'strawberry'
+  o200k_base                             [' strawberry']               ['st', 'raw', 'berry']
+  cl100k_base                            [' strawberry']               ['str', 'aw', 'berry']
+  gpt2                                   [' strawberry']               ['st', 'raw', 'berry']
+  Qwen/Qwen3-0.6B                        [' strawberry']               ['str', 'aw', 'berry']
+  allenai/OLMo-2-0425-1B                 [' strawberry']               ['str', 'aw', 'berry']
+  mistralai/Mistral-7B-v0.1              [' straw', 'berry']           [' straw', 'berry']
+  HuggingFaceTB/SmolLM2-135M             [' strawberry']               ['st', 'raw', 'berry']
+  microsoft/Phi-4-mini-instruct          [' strawberry']               ['st', 'raw', 'berry']
+
+LETTER COUNTING (correct / asked)
+model                                              plain            spaced  spell_then_count          thinking  spelling
+------------------------------------------------------------------------------------------------------------------------
+Qwen/Qwen3-0.6B                             24/104   23%      68/104   65%      31/104   30%      80/104   77%        0%
+Qwen/Qwen3-1.7B                             15/104   14%      24/104   23%      43/104   41%      96/104   92%       81%
+Qwen/Qwen3-4B                               12/104   12%      45/104   43%      84/104   81%     103/104   99%       98%
+HuggingFaceTB/SmolLM2-360M-Instruct         22/104   21%      27/104   26%       8/104    8%                 -        0%
+allenai/OLMo-2-0425-1B-Instruct             35/104   34%      29/104   28%      19/104   18%                 -        0%
+
+split (correct / asked)                                        0       1       2      3+  famous sampled
+Qwen/Qwen3-0.6B                       plain                0/24   24/24    0/26    0/30    0/8    24/96 
+Qwen/Qwen3-0.6B                       spaced              13/24   24/24   16/26   15/30    3/8    65/96 
+Qwen/Qwen3-0.6B                       spell_then_count     2/24    2/24    9/26   18/30    4/8    27/96 
+Qwen/Qwen3-0.6B                       thinking            24/24   23/24   19/26   14/30    4/8    76/96 
+Qwen/Qwen3-1.7B                       plain                0/24    4/24    3/26    8/30    3/8    12/96 
+Qwen/Qwen3-1.7B                       spaced              10/24    7/24    3/26    4/30    2/8    22/96 
+Qwen/Qwen3-1.7B                       spell_then_count     0/24   13/24    9/26   21/30    4/8    39/96 
+Qwen/Qwen3-1.7B                       thinking            24/24   24/24   25/26   23/30    7/8    89/96 
+Qwen/Qwen3-4B                         plain                6/24    1/24    2/26    3/30    3/8     9/96 
+Qwen/Qwen3-4B                         spaced              22/24    8/24    9/26    6/30    4/8    41/96 
+Qwen/Qwen3-4B                         spell_then_count    17/24   23/24   15/26   29/30    6/8    78/96 
+Qwen/Qwen3-4B                         thinking            24/24   24/24   26/26   29/30    8/8    95/96 
+HuggingFaceTB/SmolLM2-360M-Instruct   plain                0/24   15/24    0/26    7/30    2/8    20/96 
+HuggingFaceTB/SmolLM2-360M-Instruct   spaced               0/24   16/24    0/26   11/30    3/8    24/96 
+HuggingFaceTB/SmolLM2-360M-Instruct   spell_then_count     0/24    0/24    0/26    8/30    0/8     8/96 
+allenai/OLMo-2-0425-1B-Instruct       plain                0/24    7/24    6/26   22/30    5/8    30/96 
+allenai/OLMo-2-0425-1B-Instruct       spaced               0/24   16/24    1/26   12/30    3/8    26/96 
+allenai/OLMo-2-0425-1B-Instruct       spell_then_count     0/24    2/24    5/26   12/30    4/8    15/96 
+
+'strawberry', plain:
+  Qwen/Qwen3-0.6B                        'The letter "r" appears **once** in the word "strawberry". \n\nAnswer: 1'
+  Qwen/Qwen3-1.7B                        'The word "strawberry" contains **1** "r".\n\nAnswer: 1'
+  Qwen/Qwen3-4B                          '7'
+  HuggingFaceTB/SmolLM2-360M-Instruct    'The letter "r" appears 3 times in the word "strawberry".'
+  allenai/OLMo-2-0425-1B-Instruct        'The letter "r" appears 3 times in the word "strawberry".'
+
+WALL TIME PER STEP
+  corpus           70.2s
+  v1                0.3s
+  v2                1.4s
+  v3               30.7s
+  real              2.3s
+  word set          0.7s
+  count test      800.8s
+  total           906.5s

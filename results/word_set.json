@@ -1,0 +1,819 @@
+{
+ "meta": {
+  "written_at": "2026-11-21T09:59:00+00:00",
+  "project_version": "0.1.0",
+  "libraries": {
+   "python": "3.14.8",
+   "tiktoken": "0.14.0",
+   "tokenizers": "0.23.3",
+   "huggingface-hub": "2.4.0",
+   "marimo": "0.25.2",
+   "torch": "2.15.0",
+   "transformers": "5.23.0"
+  },
+  "machine": {
+   "os": "Linux x86_64",
+   "cpu": "13th Gen Intel(R) Core(TM) i7-13700F",
+   "cpu_count": 24
+  },
+  "settings": {
+   "TRAINING_BOOKS": [
+    11,
+    84,
+    1342,
+    1661,
+    98,
+    2701,
+    76,
+    16,
+    174,
+    345,
+    2600
+   ],
+   "SEED": 2026,
+   "FAMOUS_WORDS": [
+    [
+     "strawberry",
+     "r"
+    ],
+    [
+     "raspberry",
+     "r"
+    ],
+    [
+     "blueberry",
+     "b"
+    ],
+    [
+     "mississippi",
+     "s"
+    ],
+    [
+     "bookkeeper",
+     "e"
+    ],
+    [
+     "committee",
+     "t"
+    ],
+    [
+     "banana",
+     "a"
+    ],
+    [
+     "parallel",
+     "l"
+    ]
+   ],
+   "SAMPLED_PER_COUNT": 24,
+   "SAMPLE_MIN_LETTERS": 6,
+   "SAMPLE_MAX_LETTERS": 12,
+   "SAMPLE_MIN_OCCURRENCES": 5,
+   "COMMON_LETTERS": "etaoinshrdlu",
+   "SPELL_THEN_COUNT_EXAMPLE_WORD": "tomorrow"
+  },
+  "wall_seconds": 0.69
+ },
+ "items": [
+  {
+   "word": "strawberry",
+   "letter": "r",
+   "count": 3,
+   "group": "famous",
+   "count_group": "3+"
+  },
+  {
+   "word": "raspberry",
+   "letter": "r",
+   "count": 3,
+   "group": "famous",
+   "count_group": "3+"
+  },
+  {
+   "word": "blueberry",
+   "letter": "b",
+   "count": 2,
+   "group": "famous",
+   "count_group": "2"
+  },
+  {
+   "word": "mississippi",
+   "letter": "s",
+   "count": 4,
+   "group": "famous",
+   "count_group": "3+"
+  },
+  {
+   "word": "bookkeeper",
+   "letter": "e",
+   "count": 3,
+   "group": "famous",
+   "count_group": "3+"
+  },
+  {
+   "word": "committee",
+   "letter": "t",
+   "count": 2,
+   "group": "famous",
+   "count_group": "2"
+  },
+  {
+   "word": "banana",
+   "letter": "a",
+   "count": 3,
+   "group": "famous",
+   "count_group": "3+"
+  },
+  {
+   "word": "parallel",
+   "letter": "l",
+   "count": 3,
+   "group": "famous",
+   "count_group": "3+"
+  },
+  {
+   "word": "penetrate",
+   "letter": "e",
+   "count": 3,
+   "group": "sampled",
+   "count_group": "3+"
+  },
+  {
+   "word": "dispirited",
+   "letter": "i",
+   "count": 3,
+   "group": "sampled",
+   "count_group": "3+"
+  },
+  {
+   "word": "uncivilized",
+   "letter": "i",
+   "count": 3,
+   "group": "sampled",
+   "count_group": "3+"
+  },
+  {
+   "word": "cleverness",
+   "letter": "e",
+   "count": 3,
+   "group": "sampled",
+   "count_group": "3+"
+  },
+  {
+   "word": "engagements",
+   "letter": "e",
+   "count": 3,
+   "group": "sampled",
+   "count_group": "3+"
+  },
+  {
+   "word": "celebrate",
+   "letter": "e",
+   "count": 3,
+   "group": "sampled",
+   "count_group": "3+"
+  },
+  {
+   "word": "receives",
+   "letter": "e",
+   "count": 3,
+   "group": "sampled",
+   "count_group": "3+"
+  },
+  {
+   "word": "feeble",
+   "letter": "e",
+   "count": 3,
+   "group": "sampled",
+   "count_group": "3+"
+  },
+  {
+   "word": "expelled",
+   "letter": "e",
+   "count": 3,
+   "group": "sampled",
+   "count_group": "3+"
+  },
+  {
+   "word": "attainment",
+   "letter": "t",
+   "count": 3,
+   "group": "sampled",
+   "count_group": "3+"
+  },
+  {
+   "word": "sensations",
+   "letter": "s",
+   "count": 3,
+   "group": "sampled",
+   "count_group": "3+"
+  },
+  {
+   "word": "wedded",
+   "letter": "d",
+   "count": 3,
+   "group": "sampled",
+   "count_group": "3+"
+  },
+  {
+   "word": "abilities",
+   "letter": "i",
+   "count": 3,
+   "group": "sampled",
+   "count_group": "3+"
+  },
+  {
+   "word": "expense",
+   "letter": "e",
+   "count": 3,
+   "group": "sampled",
+   "count_group": "3+"
+  },
+  {
+   "word": "perplexed",
+   "letter": "e",
+   "count": 3,
+   "group": "sampled",
+   "count_group": "3+"
+  },
+  {
+   "word": "weakened",
+   "letter": "e",
+   "count": 3,
+   "group": "sampled",
+   "count_group": "3+"
+  },
+  {
+   "word": "interpreter",
+   "letter": "r",
+   "count": 3,
+   "group": "sampled",
+   "count_group": "3+"
+  },
+  {
+   "word": "simplicity",
+   "letter": "i",
+   "count": 3,
+   "group": "sampled",
+   "count_group": "3+"
+  },
+  {
+   "word": "paragraph",
+   "letter": "a",
+   "count": 3,
+   "group": "sampled",
+   "count_group": "3+"
+  },
+  {
+   "word": "requirements",
+   "letter": "e",
+   "count": 3,
+   "group": "sampled",
+   "count_group": "3+"
+  },
+  {
+   "word": "sweetheart",
+   "letter": "e",
+   "count": 3,
+   "group": "sampled",
+   "count_group": "3+"
+  },
+  {
+   "word": "researches",
+   "letter": "e",
+   "count": 3,
+   "group": "sampled",
+   "count_group": "3+"
+  },
+  {
+   "word": "maintenance",
+   "letter": "n",
+   "count": 3,
+   "group": "sampled",
+   "count_group": "3+"
+  },
+  {
+   "word": "intelligence",
+   "letter": "e",
+   "count": 3,
+   "group": "sampled",
+   "count_group": "3+"
+  },
+  {
+   "word": "stretches",
+   "letter": "t",
+   "count": 2,
+   "group": "sampled",
+   "count_group": "2"
+  },
+  {
+   "word": "immutable",
+   "letter": "m",
+   "count": 2,
+   "group": "sampled",
+   "count_group": "2"
+  },
+  {
+   "word": "admired",
+   "letter": "d",
+   "count": 2,
+   "group": "sampled",
+   "count_group": "2"
+  },
+  {
+   "word": "preparing",
+   "letter": "r",
+   "count": 2,
+   "group": "sampled",
+   "count_group": "2"
+  },
+  {
+   "word": "worthless",
+   "letter": "s",
+   "count": 2,
+   "group": "sampled",
+   "count_group": "2"
+  },
+  {
+   "word": "clicked",
+   "letter": "c",
+   "count": 2,
+   "group": "sampled",
+   "count_group": "2"
+  },
+  {
+   "word": "transformed",
+   "letter": "r",
+   "count": 2,
+   "group": "sampled",
+   "count_group": "2"
+  },
+  {
+   "word": "negative",
+   "letter": "e",
+   "count": 2,
+   "group": "sampled",
+   "count_group": "2"
+  },
+  {
+   "word": "loomed",
+   "letter": "o",
+   "count": 2,
+   "group": "sampled",
+   "count_group": "2"
+  },
+  {
+   "word": "bedside",
+   "letter": "e",
+   "count": 2,
+   "group": "sampled",
+   "count_group": "2"
+  },
+  {
+   "word": "become",
+   "letter": "e",
+   "count": 2,
+   "group": "sampled",
+   "count_group": "2"
+  },
+  {
+   "word": "accumulated",
+   "letter": "u",
+   "count": 2,
+   "group": "sampled",
+   "count_group": "2"
+  },
+  {
+   "word": "sincere",
+   "letter": "e",
+   "count": 2,
+   "group": "sampled",
+   "count_group": "2"
+  },
+  {
+   "word": "portions",
+   "letter": "o",
+   "count": 2,
+   "group": "sampled",
+   "count_group": "2"
+  },
+  {
+   "word": "recruits",
+   "letter": "r",
+   "count": 2,
+   "group": "sampled",
+   "count_group": "2"
+  },
+  {
+   "word": "queens",
+   "letter": "e",
+   "count": 2,
+   "group": "sampled",
+   "count_group": "2"
+  },
+  {
+   "word": "millions",
+   "letter": "l",
+   "count": 2,
+   "group": "sampled",
+   "count_group": "2"
+  },
+  {
+   "word": "examples",
+   "letter": "e",
+   "count": 2,
+   "group": "sampled",
+   "count_group": "2"
+  },
+  {
+   "word": "squall",
+   "letter": "l",
+   "count": 2,
+   "group": "sampled",
+   "count_group": "2"
+  },
+  {
+   "word": "affliction",
+   "letter": "f",
+   "count": 2,
+   "group": "sampled",
+   "count_group": "2"
+  },
+  {
+   "word": "lighting",
+   "letter": "i",
+   "count": 2,
+   "group": "sampled",
+   "count_group": "2"
+  },
+  {
+   "word": "conspiracy",
+   "letter": "c",
+   "count": 2,
+   "group": "sampled",
+   "count_group": "2"
+  },
+  {
+   "word": "confident",
+   "letter": "n",
+   "count": 2,
+   "group": "sampled",
+   "count_group": "2"
+  },
+  {
+   "word": "shelves",
+   "letter": "e",
+   "count": 2,
+   "group": "sampled",
+   "count_group": "2"
+  },
+  {
+   "word": "hospitable",
+   "letter": "h",
+   "count": 1,
+   "group": "sampled",
+   "count_group": "1"
+  },
+  {
+   "word": "crawled",
+   "letter": "d",
+   "count": 1,
+   "group": "sampled",
+   "count_group": "1"
+  },
+  {
+   "word": "holiday",
+   "letter": "l",
+   "count": 1,
+   "group": "sampled",
+   "count_group": "1"
+  },
+  {
+   "word": "vulgar",
+   "letter": "a",
+   "count": 1,
+   "group": "sampled",
+   "count_group": "1"
+  },
+  {
+   "word": "spider",
+   "letter": "s",
+   "count": 1,
+   "group": "sampled",
+   "count_group": "1"
+  },
+  {
+   "word": "fancied",
+   "letter": "a",
+   "count": 1,
+   "group": "sampled",
+   "count_group": "1"
+  },
+  {
+   "word": "huskily",
+   "letter": "l",
+   "count": 1,
+   "group": "sampled",
+   "count_group": "1"
+  },
+  {
+   "word": "heroism",
+   "letter": "e",
+   "count": 1,
+   "group": "sampled",
+   "count_group": "1"
+  },
+  {
+   "word": "apiece",
+   "letter": "c",
+   "count": 1,
+   "group": "sampled",
+   "count_group": "1"
+  },
+  {
+   "word": "gracefully",
+   "letter": "g",
+   "count": 1,
+   "group": "sampled",
+   "count_group": "1"
+  },
+  {
+   "word": "listen",
+   "letter": "l",
+   "count": 1,
+   "group": "sampled",
+   "count_group": "1"
+  },
+  {
+   "word": "childhood",
+   "letter": "i",
+   "count": 1,
+   "group": "sampled",
+   "count_group": "1"
+  },
+  {
+   "word": "clasping",
+   "letter": "c",
+   "count": 1,
+   "group": "sampled",
+   "count_group": "1"
+  },
+  {
+   "word": "baboon",
+   "letter": "a",
+   "count": 1,
+   "group": "sampled",
+   "count_group": "1"
+  },
+  {
+   "word": "atmospheric",
+   "letter": "s",
+   "count": 1,
+   "group": "sampled",
+   "count_group": "1"
+  },
+  {
+   "word": "surround",
+   "letter": "n",
+   "count": 1,
+   "group": "sampled",
+   "count_group": "1"
+  },
+  {
+   "word": "incline",
+   "letter": "c",
+   "count": 1,
+   "group": "sampled",
+   "count_group": "1"
+  },
+  {
+   "word": "livery",
+   "letter": "y",
+   "count": 1,
+   "group": "sampled",
+   "count_group": "1"
+  },
+  {
+   "word": "clanging",
+   "letter": "c",
+   "count": 1,
+   "group": "sampled",
+   "count_group": "1"
+  },
+  {
+   "word": "pupils",
+   "letter": "u",
+   "count": 1,
+   "group": "sampled",
+   "count_group": "1"
+  },
+  {
+   "word": "salute",
+   "letter": "u",
+   "count": 1,
+   "group": "sampled",
+   "count_group": "1"
+  },
+  {
+   "word": "freezing",
+   "letter": "n",
+   "count": 1,
+   "group": "sampled",
+   "count_group": "1"
+  },
+  {
+   "word": "stately",
+   "letter": "s",
+   "count": 1,
+   "group": "sampled",
+   "count_group": "1"
+  },
+  {
+   "word": "pastime",
+   "letter": "e",
+   "count": 1,
+   "group": "sampled",
+   "count_group": "1"
+  },
+  {
+   "word": "pricking",
+   "letter": "u",
+   "count": 0,
+   "group": "sampled",
+   "count_group": "0"
+  },
+  {
+   "word": "personage",
+   "letter": "d",
+   "count": 0,
+   "group": "sampled",
+   "count_group": "0"
+  },
+  {
+   "word": "collective",
+   "letter": "s",
+   "count": 0,
+   "group": "sampled",
+   "count_group": "0"
+  },
+  {
+   "word": "carries",
+   "letter": "o",
+   "count": 0,
+   "group": "sampled",
+   "count_group": "0"
+  },
+  {
+   "word": "disdain",
+   "letter": "l",
+   "count": 0,
+   "group": "sampled",
+   "count_group": "0"
+  },
+  {
+   "word": "traces",
+   "letter": "i",
+   "count": 0,
+   "group": "sampled",
+   "count_group": "0"
+  },
+  {
+   "word": "tables",
+   "letter": "i",
+   "count": 0,
+   "group": "sampled",
+   "count_group": "0"
+  },
+  {
+   "word": "sympathies",
+   "letter": "r",
+   "count": 0,
+   "group": "sampled",
+   "count_group": "0"
+  },
+  {
+   "word": "merits",
+   "letter": "a",
+   "count": 0,
+   "group": "sampled",
+   "count_group": "0"
+  },
+  {
+   "word": "recoiled",
+   "letter": "s",
+   "count": 0,
+   "group": "sampled",
+   "count_group": "0"
+  },
+  {
+   "word": "courtiers",
+   "letter": "a",
+   "count": 0,
+   "group": "sampled",
+   "count_group": "0"
+  },
+  {
+   "word": "tormenting",
+   "letter": "l",
+   "count": 0,
+   "group": "sampled",
+   "count_group": "0"
+  },
+  {
+   "word": "objects",
+   "letter": "h",
+   "count": 0,
+   "group": "sampled",
+   "count_group": "0"
+  },
+  {
+   "word": "mystery",
+   "letter": "n",
+   "count": 0,
+   "group": "sampled",
+   "count_group": "0"
+  },
+  {
+   "word": "blackness",
+   "letter": "h",
+   "count": 0,
+   "group": "sampled",
+   "count_group": "0"
+  },
+  {
+   "word": "preservation",
+   "letter": "u",
+   "count": 0,
+   "group": "sampled",
+   "count_group": "0"
+  },
+  {
+   "word": "fulfil",
+   "letter": "h",
+   "count": 0,
+   "group": "sampled",
+   "count_group": "0"
+  },
+  {
+   "word": "churches",
+   "letter": "d",
+   "count": 0,
+   "group": "sampled",
+   "count_group": "0"
+  },
+  {
+   "word": "twelve",
+   "letter": "s",
+   "count": 0,
+   "group": "sampled",
+   "count_group": "0"
+  },
+  {
+   "word": "memory",
+   "letter": "s",
+   "count": 0,
+   "group": "sampled",
+   "count_group": "0"
+  },
+  {
+   "word": "reality",
+   "letter": "s",
+   "count": 0,
+   "group": "sampled",
+   "count_group": "0"
+  },
+  {
+   "word": "stealthy",
+   "letter": "r",
+   "count": 0,
+   "group": "sampled",
+   "count_group": "0"
+  },
+  {
+   "word": "sitting",
+   "letter": "d",
+   "count": 0,
+   "group": "sampled",
+   "count_group": "0"
+  },
+  {
+   "word": "fairest",
+   "letter": "d",
+   "count": 0,
+   "group": "sampled",
+   "count_group": "0"
+  }
+ ],
+ "sha256": "0a763875aa3571d8a788f3fb92275e46d0356c06ea7e70d2f258d54f420259c7",
+ "n": 104,
+ "by_count_group": {
+  "3+": 30,
+  "2": 26,
+  "1": 24,
+  "0": 24
+ },
+ "by_group": {
+  "famous": 8,
+  "sampled": 96
+ }
+}

@@ -1,0 +1,337 @@
+{
+ "meta": {
+  "written_at": "2026-11-21T09:58:27+00:00",
+  "project_version": "0.1.0",
+  "libraries": {
+   "python": "3.14.8",
+   "tiktoken": "0.14.0",
+   "tokenizers": "0.23.3",
+   "huggingface-hub": "2.4.0",
+   "marimo": "0.25.2",
+   "torch": "2.15.0",
+   "transformers": "5.23.0"
+  },
+  "machine": {
+   "os": "Linux x86_64",
+   "cpu": "13th Gen Intel(R) Core(TM) i7-13700F",
+   "cpu_count": 24
+  },
+  "settings": {
+   "TRAINING_BOOKS": [
+    11,
+    84,
+    1342,
+    1661,
+    98,
+    2701,
+    76,
+    16,
+    174,
+    345,
+    2600
+   ],
+   "HELD_OUT_BOOK": 1952,
+   "DICTIONARY_MAX_VOCAB": null,
+   "EXAMPLE_PROMPT": "How many r's are in strawberry?"
+  },
+  "wall_seconds": 1.39
+ },
+ "vocab_size": 54622,
+ "distinct_words_in_training": 54621,
+ "training_tokens": 2137445,
+ "held_out_tokens": 7831,
+ "held_out_unk_tokens": 106,
+ "held_out_unk_rate": 0.013535946877793385,
+ "held_out_unk_rate_among_words": 0.016957286834106543,
+ "held_out_distinct_unknown_words": 73,
+ "held_out_most_common_unknown_words": [
+  [
+   " wallpaper",
+   12
+  ],
+  [
+   " Jennie",
+   10
+  ],
+  [
+   " arbors",
+   3
+  ],
+  [
+   " fungus",
+   3
+  ],
+  [
+   " tonics",
+   2
+  ],
+  [
+   "Personally",
+   2
+  ],
+  [
+   " breadths",
+   2
+  ],
+  [
+   " sub",
+   2
+  ],
+  [
+   " radiation",
+   2
+  ],
+  [
+   " smooch",
+   2
+  ],
+  [
+   " strangles",
+   2
+  ],
+  [
+   "Jennie",
+   2
+  ],
+  [
+   " plantain",
+   2
+  ],
+  [
+   " Wallpaper",
+   1
+  ],
+  [
+   " Perkins",
+   1
+  ]
+ ],
+ "most_common_words": [
+  [
+   ",",
+   118046
+  ],
+  [
+   "\n",
+   113065
+  ],
+  [
+   " the",
+   80481
+  ],
+  [
+   ".",
+   67823
+  ],
+  [
+   " and",
+   53289
+  ],
+  [
+   " to",
+   42859
+  ],
+  [
+   " of",
+   41204
+  ],
+  [
+   " a",
+   31034
+  ],
+  [
+   "\n\n",
+   30198
+  ],
+  [
+   " in",
+   24146
+  ],
+  [
+   " I",
+   23119
+  ],
+  [
+   " that",
+   20594
+  ],
+  [
+   "’",
+   20228
+  ],
+  [
+   " was",
+   20094
+  ],
+  [
+   " he",
+   18475
+  ],
+  [
+   "“",
+   17360
+  ],
+  [
+   " his",
+   17281
+  ],
+  [
+   " it",
+   16938
+  ],
+  [
+   ";",
+   13046
+  ],
+  [
+   " with",
+   12923
+  ]
+ ],
+ "words_seen_once": 21864,
+ "prompt": {
+  "text": "How many r's are in strawberry?",
+  "tokens": [
+   "How",
+   " many",
+   " r",
+   "<UNK>",
+   "s",
+   " are",
+   " in",
+   " strawberry",
+   "?"
+  ],
+  "ids": [
+   495,
+   243,
+   18792,
+   0,
+   28,
+   71,
+   10,
+   29224,
+   75
+  ]
+ },
+ "probes": {
+  "strawberry": {
+   "tokens": [
+    "<UNK>"
+   ],
+   "ids": [
+    0
+   ],
+   "count_in_training": 0
+  },
+  " strawberry": {
+   "tokens": [
+    " strawberry"
+   ],
+   "ids": [
+    29224
+   ],
+   "count_in_training": 2
+  },
+  "raspberry": {
+   "tokens": [
+    "<UNK>"
+   ],
+   "ids": [
+    0
+   ],
+   "count_in_training": 0
+  },
+  " raspberry": {
+   "tokens": [
+    "<UNK>"
+   ],
+   "ids": [
+    0
+   ],
+   "count_in_training": 0
+  },
+  "blueberry": {
+   "tokens": [
+    "<UNK>"
+   ],
+   "ids": [
+    0
+   ],
+   "count_in_training": 0
+  },
+  " blueberry": {
+   "tokens": [
+    "<UNK>"
+   ],
+   "ids": [
+    0
+   ],
+   "count_in_training": 0
+  },
+  "Mississippi": {
+   "tokens": [
+    "<UNK>"
+   ],
+   "ids": [
+    0
+   ],
+   "count_in_training": 0
+  },
+  " Mississippi": {
+   "tokens": [
+    " Mississippi"
+   ],
+   "ids": [
+    13869
+   ],
+   "count_in_training": 6
+  },
+  "unbelievable": {
+   "tokens": [
+    "<UNK>"
+   ],
+   "ids": [
+    0
+   ],
+   "count_in_training": 0
+  },
+  " unbelievable": {
+   "tokens": [
+    "<UNK>"
+   ],
+   "ids": [
+    0
+   ],
+   "count_in_training": 0
+  },
+  "bookkeeper": {
+   "tokens": [
+    "<UNK>"
+   ],
+   "ids": [
+    0
+   ],
+   "count_in_training": 0
+  },
+  " bookkeeper": {
+   "tokens": [
+    "<UNK>"
+   ],
+   "ids": [
+    0
+   ],
+   "count_in_training": 0
+  }
+ },
+ "scoreboard": {
+  "vocab_size": 54622,
+  "training_tokens": 2137445,
+  "held_out_tokens": 7831,
+  "held_out_chars_per_token": 4.022091686885455,
+  "held_out_unk_rate": 0.013535946877793385,
+  "strawberry_tokens": [
+   " strawberry"
+  ]
+ }
+}

@@ -1,0 +1,5591 @@
+{
+ "meta": {
+  "written_at": "2026-11-21T09:59:00+00:00",
+  "project_version": "0.1.0",
+  "libraries": {
+   "python": "3.14.8",
+   "tiktoken": "0.14.0",
+   "tokenizers": "0.23.3",
+   "huggingface-hub": "2.4.0",
+   "marimo": "0.25.2",
+   "torch": "2.15.0",
+   "transformers": "5.23.0"
+  },
+  "machine": {
+   "os": "Linux x86_64",
+   "cpu": "13th Gen Intel(R) Core(TM) i7-13700F",
+   "cpu_count": 24
+  },
+  "settings": {
+   "TIKTOKEN_ENCODINGS": {
+    "o200k_base": "GPT-4o",
+    "cl100k_base": "GPT-4",
+    "gpt2": "GPT-2"
+   },
+   "HF_TOKENIZERS": [
+    "Qwen/Qwen3-0.6B",
+    "allenai/OLMo-2-0425-1B",
+    "mistralai/Mistral-7B-v0.1",
+    "HuggingFaceTB/SmolLM2-135M",
+    "microsoft/Phi-4-mini-instruct"
+   ],
+   "HF_REVISIONS": {
+    "Qwen/Qwen3-0.6B": "c1899de289a04d12100db370d81485cdf75e47ca",
+    "Qwen/Qwen3-1.7B": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+    "Qwen/Qwen3-4B": "1cfa9a7208912126459214e8b04321603b3df60c",
+    "HuggingFaceTB/SmolLM2-360M-Instruct": "a10cc1512eabd3dde888204e902eca88bddb4951",
+    "HuggingFaceTB/SmolLM2-135M": "93efa2f097d58c2a74874c7e644dbc9b0cee75a2",
+    "allenai/OLMo-2-0425-1B-Instruct": "48d788eca847d4d7548f375ad03d3c9312f6139e",
+    "allenai/OLMo-2-0425-1B": "a1847dff35000b4271fa70afc5db10fd29fedbdf",
+    "mistralai/Mistral-7B-v0.1": "27d67f1b5f57dc0953326b2601d68371d40ea8da",
+    "microsoft/Phi-4-mini-instruct": "cfbefacb99257ffa30c83adab238a50856ac3083"
+   },
+   "PROBE_WORDS": [
+    "strawberry",
+    "raspberry",
+    "blueberry",
+    "Mississippi",
+    "unbelievable",
+    "bookkeeper"
+   ],
+   "EXAMPLE_PROMPT": "How many r's are in strawberry?"
+  },
+  "wall_seconds": 2.27
+ },
+ "tokenizers": [
+  {
+   "name": "o200k_base",
+   "used_by": "GPT-4o",
+   "vocab_size": 200019,
+   "library": "tiktoken 0.14.0",
+   "files": [
+    {
+     "url": "https://openaipublic.blob.core.windows.net/encodings/o200k_base.tiktoken",
+     "sha256": "446a9538cb6c348e3516120d7c08b09f57c36495e2acfffe59a5bf8b0cfb1a2d"
+    }
+   ],
+   "licence": {
+    "licence": "MIT",
+    "note": "Encoding file distributed by OpenAI with the tiktoken library, which is MIT-licensed.",
+    "source_url": "https://github.com/openai/tiktoken/blob/main/LICENSE"
+   },
+   "prompt": {
+    "text": "How many r's are in strawberry?",
+    "tokens": [
+     "How",
+     " many",
+     " r",
+     "'s",
+     " are",
+     " in",
+     " strawberry",
+     "?"
+    ],
+    "ids": [
+     5299,
+     1991,
+     428,
+     885,
+     553,
+     306,
+     101830,
+     30
+    ],
+    "raw_tokens": [
+     "How",
+     " many",
+     " r",
+     "'s",
+     " are",
+     " in",
+     " strawberry",
+     "?"
+    ]
+   },
+   "probes": {
+    "strawberry": [
+     {
+      "text": "strawberry",
+      "tokens": [
+       "st",
+       "raw",
+       "berry"
+      ],
+      "ids": [
+       302,
+       1618,
+       19772
+      ],
+      "raw_tokens": [
+       "st",
+       "raw",
+       "berry"
+      ]
+     },
+     {
+      "text": " strawberry",
+      "tokens": [
+       " strawberry"
+      ],
+      "ids": [
+       101830
+      ],
+      "raw_tokens": [
+       " strawberry"
+      ]
+     },
+     {
+      "text": "Strawberry",
+      "tokens": [
+       "Str",
+       "aw",
+       "berry"
+      ],
+      "ids": [
+       3504,
+       1134,
+       19772
+      ],
+      "raw_tokens": [
+       "Str",
+       "aw",
+       "berry"
+      ]
+     },
+     {
+      "text": " Strawberry",
+      "tokens": [
+       " Strawberry"
+      ],
+      "ids": [
+       138322
+      ],
+      "raw_tokens": [
+       " Strawberry"
+      ]
+     },
+     {
+      "text": "STRAWBERRY",
+      "tokens": [
+       "ST",
+       "RAW",
+       "B",
+       "ERRY"
+      ],
+      "ids": [
+       1117,
+       46176,
+       33,
+       132354
+      ],
+      "raw_tokens": [
+       "ST",
+       "RAW",
+       "B",
+       "ERRY"
+      ]
+     },
+     {
+      "text": " STRAWBERRY",
+      "tokens": [
+       " STR",
+       "AW",
+       "B",
+       "ERRY"
+      ],
+      "ids": [
+       24360,
+       24853,
+       33,
+       132354
+      ],
+      "raw_tokens": [
+       " STR",
+       "AW",
+       "B",
+       "ERRY"
+      ]
+     }
+    ],
+    "raspberry": [
+     {
+      "text": "raspberry",
+      "tokens": [
+       "ras",
+       "p",
+       "berry"
+      ],
+      "ids": [
+       6285,
+       79,
+       19772
+      ],
+      "raw_tokens": [
+       "ras",
+       "p",
+       "berry"
+      ]
+     },
+     {
+      "text": " raspberry",
+      "tokens": [
+       " raspberry"
+      ],
+      "ids": [
+       134404
+      ],
+      "raw_tokens": [
+       " raspberry"
+      ]
+     },
+     {
+      "text": "Raspberry",
+      "tokens": [
+       "R",
+       "aspberry"
+      ],
+      "ids": [
+       49,
+       59213
+      ],
+      "raw_tokens": [
+       "R",
+       "aspberry"
+      ]
+     },
+     {
+      "text": " Raspberry",
+      "tokens": [
+       " Raspberry"
+      ],
+      "ids": [
+       87711
+      ],
+      "raw_tokens": [
+       " Raspberry"
+      ]
+     },
+     {
+      "text": "RASPBERRY",
+      "tokens": [
+       "RAS",
+       "PB",
+       "ERRY"
+      ],
+      "ids": [
+       137586,
+       58530,
+       132354
+      ],
+      "raw_tokens": [
+       "RAS",
+       "PB",
+       "ERRY"
+      ]
+     },
+     {
+      "text": " RASPBERRY",
+      "tokens": [
+       " R",
+       "AS",
+       "PB",
+       "ERRY"
+      ],
+      "ids": [
+       460,
+       2158,
+       58530,
+       132354
+      ],
+      "raw_tokens": [
+       " R",
+       "AS",
+       "PB",
+       "ERRY"
+      ]
+     }
+    ],
+    "blueberry": [
+     {
+      "text": "blueberry",
+      "tokens": [
+       "blue",
+       "berry"
+      ],
+      "ids": [
+       18789,
+       19772
+      ],
+      "raw_tokens": [
+       "blue",
+       "berry"
+      ]
+     },
+     {
+      "text": " blueberry",
+      "tokens": [
+       " blueberry"
+      ],
+      "ids": [
+       177717
+      ],
+      "raw_tokens": [
+       " blueberry"
+      ]
+     },
+     {
+      "text": "Blueberry",
+      "tokens": [
+       "Blue",
+       "berry"
+      ],
+      "ids": [
+       15957,
+       19772
+      ],
+      "raw_tokens": [
+       "Blue",
+       "berry"
+      ]
+     },
+     {
+      "text": " Blueberry",
+      "tokens": [
+       " Blue",
+       "berry"
+      ],
+      "ids": [
+       11942,
+       19772
+      ],
+      "raw_tokens": [
+       " Blue",
+       "berry"
+      ]
+     },
+     {
+      "text": "BLUEBERRY",
+      "tokens": [
+       "BLUE",
+       "B",
+       "ERRY"
+      ],
+      "ids": [
+       134698,
+       33,
+       132354
+      ],
+      "raw_tokens": [
+       "BLUE",
+       "B",
+       "ERRY"
+      ]
+     },
+     {
+      "text": " BLUEBERRY",
+      "tokens": [
+       " BLUE",
+       "B",
+       "ERRY"
+      ],
+      "ids": [
+       110151,
+       33,
+       132354
+      ],
+      "raw_tokens": [
+       " BLUE",
+       "B",
+       "ERRY"
+      ]
+     }
+    ],
+    "Mississippi": [
+     {
+      "text": "mississippi",
+      "tokens": [
+       "miss",
+       "issippi"
+      ],
+      "ids": [
+       15399,
+       43884
+      ],
+      "raw_tokens": [
+       "miss",
+       "issippi"
+      ]
+     },
+     {
+      "text": " mississippi",
+      "tokens": [
+       " miss",
+       "issippi"
+      ],
+      "ids": [
+       5141,
+       43884
+      ],
+      "raw_tokens": [
+       " miss",
+       "issippi"
+      ]
+     },
+     {
+      "text": "Mississippi",
+      "tokens": [
+       "Miss",
+       "issippi"
+      ],
+      "ids": [
+       40677,
+       43884
+      ],
+      "raw_tokens": [
+       "Miss",
+       "issippi"
+      ]
+     },
+     {
+      "text": " Mississippi",
+      "tokens": [
+       " Mississippi"
+      ],
+      "ids": [
+       48355
+      ],
+      "raw_tokens": [
+       " Mississippi"
+      ]
+     },
+     {
+      "text": "MISSISSIPPI",
+      "tokens": [
+       "MISS",
+       "ISS",
+       "IP",
+       "PI"
+      ],
+      "ids": [
+       113585,
+       20720,
+       3799,
+       5479
+      ],
+      "raw_tokens": [
+       "MISS",
+       "ISS",
+       "IP",
+       "PI"
+      ]
+     },
+     {
+      "text": " MISSISSIPPI",
+      "tokens": [
+       " MISS",
+       "ISS",
+       "IP",
+       "PI"
+      ],
+      "ids": [
+       170085,
+       20720,
+       3799,
+       5479
+      ],
+      "raw_tokens": [
+       " MISS",
+       "ISS",
+       "IP",
+       "PI"
+      ]
+     }
+    ],
+    "unbelievable": [
+     {
+      "text": "unbelievable",
+      "tokens": [
+       "un",
+       "bel",
+       "ievable"
+      ],
+      "ids": [
+       373,
+       9880,
+       45794
+      ],
+      "raw_tokens": [
+       "un",
+       "bel",
+       "ievable"
+      ]
+     },
+     {
+      "text": " unbelievable",
+      "tokens": [
+       " unbelievable"
+      ],
+      "ids": [
+       83614
+      ],
+      "raw_tokens": [
+       " unbelievable"
+      ]
+     },
+     {
+      "text": "Unbelievable",
+      "tokens": [
+       "Un",
+       "bel",
+       "ievable"
+      ],
+      "ids": [
+       2265,
+       9880,
+       45794
+      ],
+      "raw_tokens": [
+       "Un",
+       "bel",
+       "ievable"
+      ]
+     },
+     {
+      "text": " Unbelievable",
+      "tokens": [
+       " Un",
+       "bel",
+       "ievable"
+      ],
+      "ids": [
+       1367,
+       9880,
+       45794
+      ],
+      "raw_tokens": [
+       " Un",
+       "bel",
+       "ievable"
+      ]
+     },
+     {
+      "text": "UNBELIEVABLE",
+      "tokens": [
+       "UN",
+       "BEL",
+       "IE",
+       "V",
+       "ABLE"
+      ],
+      "ids": [
+       2926,
+       145944,
+       7654,
+       53,
+       6606
+      ],
+      "raw_tokens": [
+       "UN",
+       "BEL",
+       "IE",
+       "V",
+       "ABLE"
+      ]
+     },
+     {
+      "text": " UNBELIEVABLE",
+      "tokens": [
+       " UN",
+       "BEL",
+       "IE",
+       "V",
+       "ABLE"
+      ],
+      "ids": [
+       9014,
+       145944,
+       7654,
+       53,
+       6606
+      ],
+      "raw_tokens": [
+       " UN",
+       "BEL",
+       "IE",
+       "V",
+       "ABLE"
+      ]
+     }
+    ],
+    "bookkeeper": [
+     {
+      "text": "bookkeeper",
+      "tokens": [
+       "book",
+       "keeper"
+      ],
+      "ids": [
+       3092,
+       41968
+      ],
+      "raw_tokens": [
+       "book",
+       "keeper"
+      ]
+     },
+     {
+      "text": " bookkeeper",
+      "tokens": [
+       " book",
+       "keeper"
+      ],
+      "ids": [
+       2392,
+       41968
+      ],
+      "raw_tokens": [
+       " book",
+       "keeper"
+      ]
+     },
+     {
+      "text": "Bookkeeper",
+      "tokens": [
+       "Book",
+       "keeper"
+      ],
+      "ids": [
+       6904,
+       41968
+      ],
+      "raw_tokens": [
+       "Book",
+       "keeper"
+      ]
+     },
+     {
+      "text": " Bookkeeper",
+      "tokens": [
+       " Book",
+       "keeper"
+      ],
+      "ids": [
+       6951,
+       41968
+      ],
+      "raw_tokens": [
+       " Book",
+       "keeper"
+      ]
+     },
+     {
+      "text": "BOOKKEEPER",
+      "tokens": [
+       "BOOK",
+       "KEEP",
+       "ER"
+      ],
+      "ids": [
+       51419,
+       119145,
+       866
+      ],
+      "raw_tokens": [
+       "BOOK",
+       "KEEP",
+       "ER"
+      ]
+     },
+     {
+      "text": " BOOKKEEPER",
+      "tokens": [
+       " BOOK",
+       "KEEP",
+       "ER"
+      ],
+      "ids": [
+       58863,
+       119145,
+       866
+      ],
+      "raw_tokens": [
+       " BOOK",
+       "KEEP",
+       "ER"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "cl100k_base",
+   "used_by": "GPT-4",
+   "vocab_size": 100277,
+   "library": "tiktoken 0.14.0",
+   "files": [
+    {
+     "url": "https://openaipublic.blob.core.windows.net/encodings/cl100k_base.tiktoken",
+     "sha256": "223921b76ee99bde995b7ff738513eef100fb51d18c93597a113bcffe865b2a7"
+    }
+   ],
+   "licence": {
+    "licence": "MIT",
+    "note": "Encoding file distributed by OpenAI with the tiktoken library, which is MIT-licensed.",
+    "source_url": "https://github.com/openai/tiktoken/blob/main/LICENSE"
+   },
+   "prompt": {
+    "text": "How many r's are in strawberry?",
+    "tokens": [
+     "How",
+     " many",
+     " r",
+     "'s",
+     " are",
+     " in",
+     " strawberry",
+     "?"
+    ],
+    "ids": [
+     4438,
+     1690,
+     436,
+     596,
+     527,
+     304,
+     73700,
+     30
+    ],
+    "raw_tokens": [
+     "How",
+     " many",
+     " r",
+     "'s",
+     " are",
+     " in",
+     " strawberry",
+     "?"
+    ]
+   },
+   "probes": {
+    "strawberry": [
+     {
+      "text": "strawberry",
+      "tokens": [
+       "str",
+       "aw",
+       "berry"
+      ],
+      "ids": [
+       496,
+       675,
+       15717
+      ],
+      "raw_tokens": [
+       "str",
+       "aw",
+       "berry"
+      ]
+     },
+     {
+      "text": " strawberry",
+      "tokens": [
+       " strawberry"
+      ],
+      "ids": [
+       73700
+      ],
+      "raw_tokens": [
+       " strawberry"
+      ]
+     },
+     {
+      "text": "Strawberry",
+      "tokens": [
+       "Str",
+       "aw",
+       "berry"
+      ],
+      "ids": [
+       2645,
+       675,
+       15717
+      ],
+      "raw_tokens": [
+       "Str",
+       "aw",
+       "berry"
+      ]
+     },
+     {
+      "text": " Strawberry",
+      "tokens": [
+       " Strawberry"
+      ],
+      "ids": [
+       89077
+      ],
+      "raw_tokens": [
+       " Strawberry"
+      ]
+     },
+     {
+      "text": "STRAWBERRY",
+      "tokens": [
+       "ST",
+       "RAW",
+       "B",
+       "ERRY"
+      ],
+      "ids": [
+       790,
+       22275,
+       33,
+       73995
+      ],
+      "raw_tokens": [
+       "ST",
+       "RAW",
+       "B",
+       "ERRY"
+      ]
+     },
+     {
+      "text": " STRAWBERRY",
+      "tokens": [
+       " STR",
+       "AW",
+       "B",
+       "ERRY"
+      ],
+      "ids": [
+       12428,
+       14757,
+       33,
+       73995
+      ],
+      "raw_tokens": [
+       " STR",
+       "AW",
+       "B",
+       "ERRY"
+      ]
+     }
+    ],
+    "raspberry": [
+     {
+      "text": "raspberry",
+      "tokens": [
+       "ras",
+       "p",
+       "berry"
+      ],
+      "ids": [
+       13075,
+       79,
+       15717
+      ],
+      "raw_tokens": [
+       "ras",
+       "p",
+       "berry"
+      ]
+     },
+     {
+      "text": " raspberry",
+      "tokens": [
+       " raspberry"
+      ],
+      "ids": [
+       94802
+      ],
+      "raw_tokens": [
+       " raspberry"
+      ]
+     },
+     {
+      "text": "Raspberry",
+      "tokens": [
+       "R",
+       "aspberry"
+      ],
+      "ids": [
+       49,
+       37062
+      ],
+      "raw_tokens": [
+       "R",
+       "aspberry"
+      ]
+     },
+     {
+      "text": " Raspberry",
+      "tokens": [
+       " Raspberry"
+      ],
+      "ids": [
+       48665
+      ],
+      "raw_tokens": [
+       " Raspberry"
+      ]
+     },
+     {
+      "text": "RASPBERRY",
+      "tokens": [
+       "R",
+       "AS",
+       "PB",
+       "ERRY"
+      ],
+      "ids": [
+       49,
+       1950,
+       41737,
+       73995
+      ],
+      "raw_tokens": [
+       "R",
+       "AS",
+       "PB",
+       "ERRY"
+      ]
+     },
+     {
+      "text": " RASPBERRY",
+      "tokens": [
+       " R",
+       "AS",
+       "PB",
+       "ERRY"
+      ],
+      "ids": [
+       432,
+       1950,
+       41737,
+       73995
+      ],
+      "raw_tokens": [
+       " R",
+       "AS",
+       "PB",
+       "ERRY"
+      ]
+     }
+    ],
+    "blueberry": [
+     {
+      "text": "blueberry",
+      "tokens": [
+       "blue",
+       "berry"
+      ],
+      "ids": [
+       12481,
+       15717
+      ],
+      "raw_tokens": [
+       "blue",
+       "berry"
+      ]
+     },
+     {
+      "text": " blueberry",
+      "tokens": [
+       " blue",
+       "berry"
+      ],
+      "ids": [
+       6437,
+       15717
+      ],
+      "raw_tokens": [
+       " blue",
+       "berry"
+      ]
+     },
+     {
+      "text": "Blueberry",
+      "tokens": [
+       "Blue",
+       "berry"
+      ],
+      "ids": [
+       10544,
+       15717
+      ],
+      "raw_tokens": [
+       "Blue",
+       "berry"
+      ]
+     },
+     {
+      "text": " Blueberry",
+      "tokens": [
+       " Blue",
+       "berry"
+      ],
+      "ids": [
+       8868,
+       15717
+      ],
+      "raw_tokens": [
+       " Blue",
+       "berry"
+      ]
+     },
+     {
+      "text": "BLUEBERRY",
+      "tokens": [
+       "BLUE",
+       "B",
+       "ERRY"
+      ],
+      "ids": [
+       65430,
+       33,
+       73995
+      ],
+      "raw_tokens": [
+       "BLUE",
+       "B",
+       "ERRY"
+      ]
+     },
+     {
+      "text": " BLUEBERRY",
+      "tokens": [
+       " BLUE",
+       "B",
+       "ERRY"
+      ],
+      "ids": [
+       56992,
+       33,
+       73995
+      ],
+      "raw_tokens": [
+       " BLUE",
+       "B",
+       "ERRY"
+      ]
+     }
+    ],
+    "Mississippi": [
+     {
+      "text": "mississippi",
+      "tokens": [
+       "miss",
+       "issippi"
+      ],
+      "ids": [
+       1869,
+       27126
+      ],
+      "raw_tokens": [
+       "miss",
+       "issippi"
+      ]
+     },
+     {
+      "text": " mississippi",
+      "tokens": [
+       " miss",
+       "issippi"
+      ],
+      "ids": [
+       3194,
+       27126
+      ],
+      "raw_tokens": [
+       " miss",
+       "issippi"
+      ]
+     },
+     {
+      "text": "Mississippi",
+      "tokens": [
+       "Miss",
+       "issippi"
+      ],
+      "ids": [
+       36412,
+       27126
+      ],
+      "raw_tokens": [
+       "Miss",
+       "issippi"
+      ]
+     },
+     {
+      "text": " Mississippi",
+      "tokens": [
+       " Mississippi"
+      ],
+      "ids": [
+       29538
+      ],
+      "raw_tokens": [
+       " Mississippi"
+      ]
+     },
+     {
+      "text": "MISSISSIPPI",
+      "tokens": [
+       "MISS",
+       "ISS",
+       "IP",
+       "PI"
+      ],
+      "ids": [
+       80570,
+       31949,
+       3378,
+       1932
+      ],
+      "raw_tokens": [
+       "MISS",
+       "ISS",
+       "IP",
+       "PI"
+      ]
+     },
+     {
+      "text": " MISSISSIPPI",
+      "tokens": [
+       " MISS",
+       "ISS",
+       "IP",
+       "PI"
+      ],
+      "ids": [
+       63847,
+       31949,
+       3378,
+       1932
+      ],
+      "raw_tokens": [
+       " MISS",
+       "ISS",
+       "IP",
+       "PI"
+      ]
+     }
+    ],
+    "unbelievable": [
+     {
+      "text": "unbelievable",
+      "tokens": [
+       "un",
+       "belie",
+       "vable"
+      ],
+      "ids": [
+       359,
+       32898,
+       24694
+      ],
+      "raw_tokens": [
+       "un",
+       "belie",
+       "vable"
+      ]
+     },
+     {
+      "text": " unbelievable",
+      "tokens": [
+       " unbelievable"
+      ],
+      "ids": [
+       52229
+      ],
+      "raw_tokens": [
+       " unbelievable"
+      ]
+     },
+     {
+      "text": "Unbelievable",
+      "tokens": [
+       "Un",
+       "belie",
+       "vable"
+      ],
+      "ids": [
+       1844,
+       32898,
+       24694
+      ],
+      "raw_tokens": [
+       "Un",
+       "belie",
+       "vable"
+      ]
+     },
+     {
+      "text": " Unbelievable",
+      "tokens": [
+       " Un",
+       "belie",
+       "vable"
+      ],
+      "ids": [
+       1252,
+       32898,
+       24694
+      ],
+      "raw_tokens": [
+       " Un",
+       "belie",
+       "vable"
+      ]
+     },
+     {
+      "text": "UNBELIEVABLE",
+      "tokens": [
+       "UN",
+       "BEL",
+       "IE",
+       "V",
+       "ABLE"
+      ],
+      "ids": [
+       1899,
+       80101,
+       5484,
+       53,
+       3578
+      ],
+      "raw_tokens": [
+       "UN",
+       "BEL",
+       "IE",
+       "V",
+       "ABLE"
+      ]
+     },
+     {
+      "text": " UNBELIEVABLE",
+      "tokens": [
+       " UN",
+       "BEL",
+       "IE",
+       "V",
+       "ABLE"
+      ],
+      "ids": [
+       6781,
+       80101,
+       5484,
+       53,
+       3578
+      ],
+      "raw_tokens": [
+       " UN",
+       "BEL",
+       "IE",
+       "V",
+       "ABLE"
+      ]
+     }
+    ],
+    "bookkeeper": [
+     {
+      "text": "bookkeeper",
+      "tokens": [
+       "book",
+       "keeper"
+      ],
+      "ids": [
+       2239,
+       19393
+      ],
+      "raw_tokens": [
+       "book",
+       "keeper"
+      ]
+     },
+     {
+      "text": " bookkeeper",
+      "tokens": [
+       " book",
+       "keeper"
+      ],
+      "ids": [
+       2363,
+       19393
+      ],
+      "raw_tokens": [
+       " book",
+       "keeper"
+      ]
+     },
+     {
+      "text": "Bookkeeper",
+      "tokens": [
+       "Book",
+       "keeper"
+      ],
+      "ids": [
+       7280,
+       19393
+      ],
+      "raw_tokens": [
+       "Book",
+       "keeper"
+      ]
+     },
+     {
+      "text": " Bookkeeper",
+      "tokens": [
+       " Book",
+       "keeper"
+      ],
+      "ids": [
+       6017,
+       19393
+      ],
+      "raw_tokens": [
+       " Book",
+       "keeper"
+      ]
+     },
+     {
+      "text": "BOOKKEEPER",
+      "tokens": [
+       "BOOK",
+       "KEEP",
+       "ER"
+      ],
+      "ids": [
+       37725,
+       52901,
+       643
+      ],
+      "raw_tokens": [
+       "BOOK",
+       "KEEP",
+       "ER"
+      ]
+     },
+     {
+      "text": " BOOKKEEPER",
+      "tokens": [
+       " BOOK",
+       "KEEP",
+       "ER"
+      ],
+      "ids": [
+       48198,
+       52901,
+       643
+      ],
+      "raw_tokens": [
+       " BOOK",
+       "KEEP",
+       "ER"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "gpt2",
+   "used_by": "GPT-2",
+   "vocab_size": 50257,
+   "library": "tiktoken 0.14.0",
+   "files": [
+    {
+     "url": "https://openaipublic.blob.core.windows.net/gpt-2/encodings/main/vocab.bpe",
+     "sha256": "1ce1664773c50f3e0cc8842619a93edc4624525b728b188a9e0be33b7726adc5"
+    },
+    {
+     "url": "https://openaipublic.blob.core.windows.net/gpt-2/encodings/main/encoder.json",
+     "sha256": "196139668be63f3b5d6574427317ae82f612a97c5d1cdaf36ed2256dbf636783"
+    }
+   ],
+   "licence": {
+    "licence": "Modified MIT",
+    "note": "GPT-2's vocabulary comes from the openai/gpt-2 release (\"Modified MIT License\"); tiktoken itself is MIT.",
+    "source_url": "https://github.com/openai/gpt-2/blob/master/LICENSE"
+   },
+   "prompt": {
+    "text": "How many r's are in strawberry?",
+    "tokens": [
+     "How",
+     " many",
+     " r",
+     "'s",
+     " are",
+     " in",
+     " strawberry",
+     "?"
+    ],
+    "ids": [
+     2437,
+     867,
+     374,
+     338,
+     389,
+     287,
+     41236,
+     30
+    ],
+    "raw_tokens": [
+     "How",
+     " many",
+     " r",
+     "'s",
+     " are",
+     " in",
+     " strawberry",
+     "?"
+    ]
+   },
+   "probes": {
+    "strawberry": [
+     {
+      "text": "strawberry",
+      "tokens": [
+       "st",
+       "raw",
+       "berry"
+      ],
+      "ids": [
+       301,
+       1831,
+       8396
+      ],
+      "raw_tokens": [
+       "st",
+       "raw",
+       "berry"
+      ]
+     },
+     {
+      "text": " strawberry",
+      "tokens": [
+       " strawberry"
+      ],
+      "ids": [
+       41236
+      ],
+      "raw_tokens": [
+       " strawberry"
+      ]
+     },
+     {
+      "text": "Strawberry",
+      "tokens": [
+       "St",
+       "raw",
+       "berry"
+      ],
+      "ids": [
+       1273,
+       1831,
+       8396
+      ],
+      "raw_tokens": [
+       "St",
+       "raw",
+       "berry"
+      ]
+     },
+     {
+      "text": " Strawberry",
+      "tokens": [
+       " Strawberry"
+      ],
+      "ids": [
+       42611
+      ],
+      "raw_tokens": [
+       " Strawberry"
+      ]
+     },
+     {
+      "text": "STRAWBERRY",
+      "tokens": [
+       "ST",
+       "RAW",
+       "BER",
+       "RY"
+      ],
+      "ids": [
+       2257,
+       20530,
+       13246,
+       18276
+      ],
+      "raw_tokens": [
+       "ST",
+       "RAW",
+       "BER",
+       "RY"
+      ]
+     },
+     {
+      "text": " STRAWBERRY",
+      "tokens": [
+       " ST",
+       "RAW",
+       "BER",
+       "RY"
+      ],
+      "ids": [
+       3563,
+       20530,
+       13246,
+       18276
+      ],
+      "raw_tokens": [
+       " ST",
+       "RAW",
+       "BER",
+       "RY"
+      ]
+     }
+    ],
+    "raspberry": [
+     {
+      "text": "raspberry",
+      "tokens": [
+       "r",
+       "aspberry"
+      ],
+      "ids": [
+       81,
+       17653
+      ],
+      "raw_tokens": [
+       "r",
+       "aspberry"
+      ]
+     },
+     {
+      "text": " raspberry",
+      "tokens": [
+       " raspberry"
+      ],
+      "ids": [
+       38973
+      ],
+      "raw_tokens": [
+       " raspberry"
+      ]
+     },
+     {
+      "text": "Raspberry",
+      "tokens": [
+       "R",
+       "aspberry"
+      ],
+      "ids": [
+       49,
+       17653
+      ],
+      "raw_tokens": [
+       "R",
+       "aspberry"
+      ]
+     },
+     {
+      "text": " Raspberry",
+      "tokens": [
+       " Raspberry"
+      ],
+      "ids": [
+       24244
+      ],
+      "raw_tokens": [
+       " Raspberry"
+      ]
+     },
+     {
+      "text": "RASPBERRY",
+      "tokens": [
+       "R",
+       "AS",
+       "P",
+       "BER",
+       "RY"
+      ],
+      "ids": [
+       49,
+       1921,
+       47,
+       13246,
+       18276
+      ],
+      "raw_tokens": [
+       "R",
+       "AS",
+       "P",
+       "BER",
+       "RY"
+      ]
+     },
+     {
+      "text": " RASPBERRY",
+      "tokens": [
+       " R",
+       "AS",
+       "P",
+       "BER",
+       "RY"
+      ],
+      "ids": [
+       371,
+       1921,
+       47,
+       13246,
+       18276
+      ],
+      "raw_tokens": [
+       " R",
+       "AS",
+       "P",
+       "BER",
+       "RY"
+      ]
+     }
+    ],
+    "blueberry": [
+     {
+      "text": "blueberry",
+      "tokens": [
+       "blue",
+       "berry"
+      ],
+      "ids": [
+       17585,
+       8396
+      ],
+      "raw_tokens": [
+       "blue",
+       "berry"
+      ]
+     },
+     {
+      "text": " blueberry",
+      "tokens": [
+       " blue",
+       "berry"
+      ],
+      "ids": [
+       4171,
+       8396
+      ],
+      "raw_tokens": [
+       " blue",
+       "berry"
+      ]
+     },
+     {
+      "text": "Blueberry",
+      "tokens": [
+       "Blue",
+       "berry"
+      ],
+      "ids": [
+       14573,
+       8396
+      ],
+      "raw_tokens": [
+       "Blue",
+       "berry"
+      ]
+     },
+     {
+      "text": " Blueberry",
+      "tokens": [
+       " Blue",
+       "berry"
+      ],
+      "ids": [
+       4518,
+       8396
+      ],
+      "raw_tokens": [
+       " Blue",
+       "berry"
+      ]
+     },
+     {
+      "text": "BLUEBERRY",
+      "tokens": [
+       "BL",
+       "UE",
+       "BER",
+       "RY"
+      ],
+      "ids": [
+       9148,
+       8924,
+       13246,
+       18276
+      ],
+      "raw_tokens": [
+       "BL",
+       "UE",
+       "BER",
+       "RY"
+      ]
+     },
+     {
+      "text": " BLUEBERRY",
+      "tokens": [
+       " BL",
+       "UE",
+       "BER",
+       "RY"
+      ],
+      "ids": [
+       9878,
+       8924,
+       13246,
+       18276
+      ],
+      "raw_tokens": [
+       " BL",
+       "UE",
+       "BER",
+       "RY"
+      ]
+     }
+    ],
+    "Mississippi": [
+     {
+      "text": "mississippi",
+      "tokens": [
+       "miss",
+       "iss",
+       "ippi"
+      ],
+      "ids": [
+       3927,
+       747,
+       12715
+      ],
+      "raw_tokens": [
+       "miss",
+       "iss",
+       "ippi"
+      ]
+     },
+     {
+      "text": " mississippi",
+      "tokens": [
+       " miss",
+       "iss",
+       "ippi"
+      ],
+      "ids": [
+       2051,
+       747,
+       12715
+      ],
+      "raw_tokens": [
+       " miss",
+       "iss",
+       "ippi"
+      ]
+     },
+     {
+      "text": "Mississippi",
+      "tokens": [
+       "Miss",
+       "iss",
+       "ippi"
+      ],
+      "ids": [
+       17140,
+       747,
+       12715
+      ],
+      "raw_tokens": [
+       "Miss",
+       "iss",
+       "ippi"
+      ]
+     },
+     {
+      "text": " Mississippi",
+      "tokens": [
+       " Mississippi"
+      ],
+      "ids": [
+       13797
+      ],
+      "raw_tokens": [
+       " Mississippi"
+      ]
+     },
+     {
+      "text": "MISSISSIPPI",
+      "tokens": [
+       "M",
+       "ISS",
+       "ISS",
+       "IP",
+       "PI"
+      ],
+      "ids": [
+       44,
+       16744,
+       16744,
+       4061,
+       11901
+      ],
+      "raw_tokens": [
+       "M",
+       "ISS",
+       "ISS",
+       "IP",
+       "PI"
+      ]
+     },
+     {
+      "text": " MISSISSIPPI",
+      "tokens": [
+       " MISS",
+       "ISS",
+       "IP",
+       "PI"
+      ],
+      "ids": [
+       49684,
+       16744,
+       4061,
+       11901
+      ],
+      "raw_tokens": [
+       " MISS",
+       "ISS",
+       "IP",
+       "PI"
+      ]
+     }
+    ],
+    "unbelievable": [
+     {
+      "text": "unbelievable",
+      "tokens": [
+       "un",
+       "bel",
+       "iev",
+       "able"
+      ],
+      "ids": [
+       403,
+       6667,
+       11203,
+       540
+      ],
+      "raw_tokens": [
+       "un",
+       "bel",
+       "iev",
+       "able"
+      ]
+     },
+     {
+      "text": " unbelievable",
+      "tokens": [
+       " unbelievable"
+      ],
+      "ids": [
+       24479
+      ],
+      "raw_tokens": [
+       " unbelievable"
+      ]
+     },
+     {
+      "text": "Unbelievable",
+      "tokens": [
+       "Un",
+       "bel",
+       "iev",
+       "able"
+      ],
+      "ids": [
+       3118,
+       6667,
+       11203,
+       540
+      ],
+      "raw_tokens": [
+       "Un",
+       "bel",
+       "iev",
+       "able"
+      ]
+     },
+     {
+      "text": " Unbelievable",
+      "tokens": [
+       " Un",
+       "bel",
+       "iev",
+       "able"
+      ],
+      "ids": [
+       791,
+       6667,
+       11203,
+       540
+      ],
+      "raw_tokens": [
+       " Un",
+       "bel",
+       "iev",
+       "able"
+      ]
+     },
+     {
+      "text": "UNBELIEVABLE",
+      "tokens": [
+       "UN",
+       "B",
+       "EL",
+       "IE",
+       "V",
+       "ABLE"
+      ],
+      "ids": [
+       4944,
+       33,
+       3698,
+       10008,
+       53,
+       17534
+      ],
+      "raw_tokens": [
+       "UN",
+       "B",
+       "EL",
+       "IE",
+       "V",
+       "ABLE"
+      ]
+     },
+     {
+      "text": " UNBELIEVABLE",
+      "tokens": [
+       " UN",
+       "B",
+       "EL",
+       "IE",
+       "V",
+       "ABLE"
+      ],
+      "ids": [
+       4725,
+       33,
+       3698,
+       10008,
+       53,
+       17534
+      ],
+      "raw_tokens": [
+       " UN",
+       "B",
+       "EL",
+       "IE",
+       "V",
+       "ABLE"
+      ]
+     }
+    ],
+    "bookkeeper": [
+     {
+      "text": "bookkeeper",
+      "tokens": [
+       "book",
+       "keeper"
+      ],
+      "ids": [
+       2070,
+       13884
+      ],
+      "raw_tokens": [
+       "book",
+       "keeper"
+      ]
+     },
+     {
+      "text": " bookkeeper",
+      "tokens": [
+       " book",
+       "keeper"
+      ],
+      "ids": [
+       1492,
+       13884
+      ],
+      "raw_tokens": [
+       " book",
+       "keeper"
+      ]
+     },
+     {
+      "text": "Bookkeeper",
+      "tokens": [
+       "Book",
+       "keeper"
+      ],
+      "ids": [
+       10482,
+       13884
+      ],
+      "raw_tokens": [
+       "Book",
+       "keeper"
+      ]
+     },
+     {
+      "text": " Bookkeeper",
+      "tokens": [
+       " Book",
+       "keeper"
+      ],
+      "ids": [
+       4897,
+       13884
+      ],
+      "raw_tokens": [
+       " Book",
+       "keeper"
+      ]
+     },
+     {
+      "text": "BOOKKEEPER",
+      "tokens": [
+       "BOOK",
+       "K",
+       "EE",
+       "PER"
+      ],
+      "ids": [
+       39453,
+       42,
+       6500,
+       18973
+      ],
+      "raw_tokens": [
+       "BOOK",
+       "K",
+       "EE",
+       "PER"
+      ]
+     },
+     {
+      "text": " BOOKKEEPER",
+      "tokens": [
+       " BOOK",
+       "K",
+       "EE",
+       "PER"
+      ],
+      "ids": [
+       39633,
+       42,
+       6500,
+       18973
+      ],
+      "raw_tokens": [
+       " BOOK",
+       "K",
+       "EE",
+       "PER"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "Qwen/Qwen3-0.6B",
+   "used_by": "Qwen3-0.6B",
+   "vocab_size": 151669,
+   "library": "tokenizers 0.23.3",
+   "hf_commit": "c1899de289a04d12100db370d81485cdf75e47ca",
+   "tokenizer_json_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+   "licence": {
+    "licence": "apache-2.0",
+    "source_url": "https://huggingface.co/Qwen/Qwen3-0.6B/blob/c1899de289a04d12100db370d81485cdf75e47ca/README.md",
+    "licence_file_urls": [
+     "https://huggingface.co/Qwen/Qwen3-0.6B/blob/c1899de289a04d12100db370d81485cdf75e47ca/LICENSE"
+    ]
+   },
+   "prompt": {
+    "text": "How many r's are in strawberry?",
+    "tokens": [
+     "How",
+     " many",
+     " r",
+     "'s",
+     " are",
+     " in",
+     " strawberry",
+     "?"
+    ],
+    "ids": [
+     4340,
+     1657,
+     435,
+     594,
+     525,
+     304,
+     72600,
+     30
+    ],
+    "raw_tokens": [
+     "How",
+     "Ġmany",
+     "Ġr",
+     "'s",
+     "Ġare",
+     "Ġin",
+     "Ġstrawberry",
+     "?"
+    ]
+   },
+   "probes": {
+    "strawberry": [
+     {
+      "text": "strawberry",
+      "tokens": [
+       "str",
+       "aw",
+       "berry"
+      ],
+      "ids": [
+       495,
+       672,
+       15357
+      ],
+      "raw_tokens": [
+       "str",
+       "aw",
+       "berry"
+      ]
+     },
+     {
+      "text": " strawberry",
+      "tokens": [
+       " strawberry"
+      ],
+      "ids": [
+       72600
+      ],
+      "raw_tokens": [
+       "Ġstrawberry"
+      ]
+     },
+     {
+      "text": "Strawberry",
+      "tokens": [
+       "Str",
+       "aw",
+       "berry"
+      ],
+      "ids": [
+       2580,
+       672,
+       15357
+      ],
+      "raw_tokens": [
+       "Str",
+       "aw",
+       "berry"
+      ]
+     },
+     {
+      "text": " Strawberry",
+      "tokens": [
+       " Strawberry"
+      ],
+      "ids": [
+       87977
+      ],
+      "raw_tokens": [
+       "ĠStrawberry"
+      ]
+     },
+     {
+      "text": "STRAWBERRY",
+      "tokens": [
+       "ST",
+       "RAW",
+       "B",
+       "ERRY"
+      ],
+      "ids": [
+       784,
+       21550,
+       33,
+       72895
+      ],
+      "raw_tokens": [
+       "ST",
+       "RAW",
+       "B",
+       "ERRY"
+      ]
+     },
+     {
+      "text": " STRAWBERRY",
+      "tokens": [
+       " STR",
+       "AW",
+       "B",
+       "ERRY"
+      ],
+      "ids": [
+       12152,
+       14419,
+       33,
+       72895
+      ],
+      "raw_tokens": [
+       "ĠSTR",
+       "AW",
+       "B",
+       "ERRY"
+      ]
+     }
+    ],
+    "raspberry": [
+     {
+      "text": "raspberry",
+      "tokens": [
+       "ras",
+       "p",
+       "berry"
+      ],
+      "ids": [
+       12784,
+       79,
+       15357
+      ],
+      "raw_tokens": [
+       "ras",
+       "p",
+       "berry"
+      ]
+     },
+     {
+      "text": " raspberry",
+      "tokens": [
+       " raspberry"
+      ],
+      "ids": [
+       93702
+      ],
+      "raw_tokens": [
+       "Ġraspberry"
+      ]
+     },
+     {
+      "text": "Raspberry",
+      "tokens": [
+       "R",
+       "aspberry"
+      ],
+      "ids": [
+       49,
+       35962
+      ],
+      "raw_tokens": [
+       "R",
+       "aspberry"
+      ]
+     },
+     {
+      "text": " Raspberry",
+      "tokens": [
+       " Raspberry"
+      ],
+      "ids": [
+       47565
+      ],
+      "raw_tokens": [
+       "ĠRaspberry"
+      ]
+     },
+     {
+      "text": "RASPBERRY",
+      "tokens": [
+       "R",
+       "AS",
+       "PB",
+       "ERRY"
+      ],
+      "ids": [
+       49,
+       1911,
+       40637,
+       72895
+      ],
+      "raw_tokens": [
+       "R",
+       "AS",
+       "PB",
+       "ERRY"
+      ]
+     },
+     {
+      "text": " RASPBERRY",
+      "tokens": [
+       " R",
+       "AS",
+       "PB",
+       "ERRY"
+      ],
+      "ids": [
+       431,
+       1911,
+       40637,
+       72895
+      ],
+      "raw_tokens": [
+       "ĠR",
+       "AS",
+       "PB",
+       "ERRY"
+      ]
+     }
+    ],
+    "blueberry": [
+     {
+      "text": "blueberry",
+      "tokens": [
+       "blue",
+       "berry"
+      ],
+      "ids": [
+       12203,
+       15357
+      ],
+      "raw_tokens": [
+       "blue",
+       "berry"
+      ]
+     },
+     {
+      "text": " blueberry",
+      "tokens": [
+       " blue",
+       "berry"
+      ],
+      "ids": [
+       6303,
+       15357
+      ],
+      "raw_tokens": [
+       "Ġblue",
+       "berry"
+      ]
+     },
+     {
+      "text": "Blueberry",
+      "tokens": [
+       "Blue",
+       "berry"
+      ],
+      "ids": [
+       10331,
+       15357
+      ],
+      "raw_tokens": [
+       "Blue",
+       "berry"
+      ]
+     },
+     {
+      "text": " Blueberry",
+      "tokens": [
+       " Blue",
+       "berry"
+      ],
+      "ids": [
+       8697,
+       15357
+      ],
+      "raw_tokens": [
+       "ĠBlue",
+       "berry"
+      ]
+     },
+     {
+      "text": "BLUEBERRY",
+      "tokens": [
+       "BLUE",
+       "B",
+       "ERRY"
+      ],
+      "ids": [
+       64330,
+       33,
+       72895
+      ],
+      "raw_tokens": [
+       "BLUE",
+       "B",
+       "ERRY"
+      ]
+     },
+     {
+      "text": " BLUEBERRY",
+      "tokens": [
+       " BLUE",
+       "B",
+       "ERRY"
+      ],
+      "ids": [
+       55892,
+       33,
+       72895
+      ],
+      "raw_tokens": [
+       "ĠBLUE",
+       "B",
+       "ERRY"
+      ]
+     }
+    ],
+    "Mississippi": [
+     {
+      "text": "mississippi",
+      "tokens": [
+       "miss",
+       "issippi"
+      ],
+      "ids": [
+       1831,
+       26035
+      ],
+      "raw_tokens": [
+       "miss",
+       "issippi"
+      ]
+     },
+     {
+      "text": " mississippi",
+      "tokens": [
+       " miss",
+       "issippi"
+      ],
+      "ids": [
+       3116,
+       26035
+      ],
+      "raw_tokens": [
+       "Ġmiss",
+       "issippi"
+      ]
+     },
+     {
+      "text": "Mississippi",
+      "tokens": [
+       "Miss",
+       "issippi"
+      ],
+      "ids": [
+       35312,
+       26035
+      ],
+      "raw_tokens": [
+       "Miss",
+       "issippi"
+      ]
+     },
+     {
+      "text": " Mississippi",
+      "tokens": [
+       " Mississippi"
+      ],
+      "ids": [
+       28438
+      ],
+      "raw_tokens": [
+       "ĠMississippi"
+      ]
+     },
+     {
+      "text": "MISSISSIPPI",
+      "tokens": [
+       "MISS",
+       "ISS",
+       "IP",
+       "PI"
+      ],
+      "ids": [
+       79470,
+       30849,
+       3298,
+       1893
+      ],
+      "raw_tokens": [
+       "MISS",
+       "ISS",
+       "IP",
+       "PI"
+      ]
+     },
+     {
+      "text": " MISSISSIPPI",
+      "tokens": [
+       " MISS",
+       "ISS",
+       "IP",
+       "PI"
+      ],
+      "ids": [
+       62747,
+       30849,
+       3298,
+       1893
+      ],
+      "raw_tokens": [
+       "ĠMISS",
+       "ISS",
+       "IP",
+       "PI"
+      ]
+     }
+    ],
+    "unbelievable": [
+     {
+      "text": "unbelievable",
+      "tokens": [
+       "un",
+       "belie",
+       "vable"
+      ],
+      "ids": [
+       359,
+       31798,
+       23760
+      ],
+      "raw_tokens": [
+       "un",
+       "belie",
+       "vable"
+      ]
+     },
+     {
+      "text": " unbelievable",
+      "tokens": [
+       " unbelievable"
+      ],
+      "ids": [
+       51129
+      ],
+      "raw_tokens": [
+       "Ġunbelievable"
+      ]
+     },
+     {
+      "text": "Unbelievable",
+      "tokens": [
+       "Un",
+       "belie",
+       "vable"
+      ],
+      "ids": [
+       1806,
+       31798,
+       23760
+      ],
+      "raw_tokens": [
+       "Un",
+       "belie",
+       "vable"
+      ]
+     },
+     {
+      "text": " Unbelievable",
+      "tokens": [
+       " Un",
+       "belie",
+       "vable"
+      ],
+      "ids": [
+       1230,
+       31798,
+       23760
+      ],
+      "raw_tokens": [
+       "ĠUn",
+       "belie",
+       "vable"
+      ]
+     },
+     {
+      "text": "UNBELIEVABLE",
+      "tokens": [
+       "UN",
+       "BEL",
+       "IE",
+       "V",
+       "ABLE"
+      ],
+      "ids": [
+       1861,
+       79001,
+       5371,
+       53,
+       3494
+      ],
+      "raw_tokens": [
+       "UN",
+       "BEL",
+       "IE",
+       "V",
+       "ABLE"
+      ]
+     },
+     {
+      "text": " UNBELIEVABLE",
+      "tokens": [
+       " UN",
+       "BEL",
+       "IE",
+       "V",
+       "ABLE"
+      ],
+      "ids": [
+       6643,
+       79001,
+       5371,
+       53,
+       3494
+      ],
+      "raw_tokens": [
+       "ĠUN",
+       "BEL",
+       "IE",
+       "V",
+       "ABLE"
+      ]
+     }
+    ],
+    "bookkeeper": [
+     {
+      "text": "bookkeeper",
+      "tokens": [
+       "book",
+       "keeper"
+      ],
+      "ids": [
+       2190,
+       18861
+      ],
+      "raw_tokens": [
+       "book",
+       "keeper"
+      ]
+     },
+     {
+      "text": " bookkeeper",
+      "tokens": [
+       " book",
+       "keeper"
+      ],
+      "ids": [
+       2311,
+       18861
+      ],
+      "raw_tokens": [
+       "Ġbook",
+       "keeper"
+      ]
+     },
+     {
+      "text": "Bookkeeper",
+      "tokens": [
+       "Book",
+       "keeper"
+      ],
+      "ids": [
+       7134,
+       18861
+      ],
+      "raw_tokens": [
+       "Book",
+       "keeper"
+      ]
+     },
+     {
+      "text": " Bookkeeper",
+      "tokens": [
+       " Book",
+       "keeper"
+      ],
+      "ids": [
+       5893,
+       18861
+      ],
+      "raw_tokens": [
+       "ĠBook",
+       "keeper"
+      ]
+     },
+     {
+      "text": "BOOKKEEPER",
+      "tokens": [
+       "BOOK",
+       "KEEP",
+       "ER"
+      ],
+      "ids": [
+       36625,
+       51801,
+       640
+      ],
+      "raw_tokens": [
+       "BOOK",
+       "KEEP",
+       "ER"
+      ]
+     },
+     {
+      "text": " BOOKKEEPER",
+      "tokens": [
+       " BOOK",
+       "KEEP",
+       "ER"
+      ],
+      "ids": [
+       47098,
+       51801,
+       640
+      ],
+      "raw_tokens": [
+       "ĠBOOK",
+       "KEEP",
+       "ER"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "allenai/OLMo-2-0425-1B",
+   "used_by": "OLMo-2-0425-1B",
+   "vocab_size": 100278,
+   "library": "tokenizers 0.23.3",
+   "hf_commit": "a1847dff35000b4271fa70afc5db10fd29fedbdf",
+   "tokenizer_json_sha256": "73fd5254624f39a88e3faac6a8e11300fc3c735ed37880d4f4f08db898eaecca",
+   "licence": {
+    "licence": "apache-2.0",
+    "source_url": "https://huggingface.co/allenai/OLMo-2-0425-1B/blob/a1847dff35000b4271fa70afc5db10fd29fedbdf/README.md",
+    "licence_file_urls": []
+   },
+   "prompt": {
+    "text": "How many r's are in strawberry?",
+    "tokens": [
+     "How",
+     " many",
+     " r",
+     "'s",
+     " are",
+     " in",
+     " strawberry",
+     "?"
+    ],
+    "ids": [
+     4438,
+     1690,
+     436,
+     596,
+     527,
+     304,
+     73700,
+     30
+    ],
+    "raw_tokens": [
+     "How",
+     "Ġmany",
+     "Ġr",
+     "'s",
+     "Ġare",
+     "Ġin",
+     "Ġstrawberry",
+     "?"
+    ]
+   },
+   "probes": {
+    "strawberry": [
+     {
+      "text": "strawberry",
+      "tokens": [
+       "str",
+       "aw",
+       "berry"
+      ],
+      "ids": [
+       496,
+       675,
+       15717
+      ],
+      "raw_tokens": [
+       "str",
+       "aw",
+       "berry"
+      ]
+     },
+     {
+      "text": " strawberry",
+      "tokens": [
+       " strawberry"
+      ],
+      "ids": [
+       73700
+      ],
+      "raw_tokens": [
+       "Ġstrawberry"
+      ]
+     },
+     {
+      "text": "Strawberry",
+      "tokens": [
+       "Str",
+       "aw",
+       "berry"
+      ],
+      "ids": [
+       2645,
+       675,
+       15717
+      ],
+      "raw_tokens": [
+       "Str",
+       "aw",
+       "berry"
+      ]
+     },
+     {
+      "text": " Strawberry",
+      "tokens": [
+       " Strawberry"
+      ],
+      "ids": [
+       89077
+      ],
+      "raw_tokens": [
+       "ĠStrawberry"
+      ]
+     },
+     {
+      "text": "STRAWBERRY",
+      "tokens": [
+       "ST",
+       "RAW",
+       "B",
+       "ERRY"
+      ],
+      "ids": [
+       790,
+       22275,
+       33,
+       73995
+      ],
+      "raw_tokens": [
+       "ST",
+       "RAW",
+       "B",
+       "ERRY"
+      ]
+     },
+     {
+      "text": " STRAWBERRY",
+      "tokens": [
+       " STR",
+       "AW",
+       "B",
+       "ERRY"
+      ],
+      "ids": [
+       12428,
+       14757,
+       33,
+       73995
+      ],
+      "raw_tokens": [
+       "ĠSTR",
+       "AW",
+       "B",
+       "ERRY"
+      ]
+     }
+    ],
+    "raspberry": [
+     {
+      "text": "raspberry",
+      "tokens": [
+       "ras",
+       "p",
+       "berry"
+      ],
+      "ids": [
+       13075,
+       79,
+       15717
+      ],
+      "raw_tokens": [
+       "ras",
+       "p",
+       "berry"
+      ]
+     },
+     {
+      "text": " raspberry",
+      "tokens": [
+       " raspberry"
+      ],
+      "ids": [
+       94802
+      ],
+      "raw_tokens": [
+       "Ġraspberry"
+      ]
+     },
+     {
+      "text": "Raspberry",
+      "tokens": [
+       "R",
+       "aspberry"
+      ],
+      "ids": [
+       49,
+       37062
+      ],
+      "raw_tokens": [
+       "R",
+       "aspberry"
+      ]
+     },
+     {
+      "text": " Raspberry",
+      "tokens": [
+       " Raspberry"
+      ],
+      "ids": [
+       48665
+      ],
+      "raw_tokens": [
+       "ĠRaspberry"
+      ]
+     },
+     {
+      "text": "RASPBERRY",
+      "tokens": [
+       "R",
+       "AS",
+       "PB",
+       "ERRY"
+      ],
+      "ids": [
+       49,
+       1950,
+       41737,
+       73995
+      ],
+      "raw_tokens": [
+       "R",
+       "AS",
+       "PB",
+       "ERRY"
+      ]
+     },
+     {
+      "text": " RASPBERRY",
+      "tokens": [
+       " R",
+       "AS",
+       "PB",
+       "ERRY"
+      ],
+      "ids": [
+       432,
+       1950,
+       41737,
+       73995
+      ],
+      "raw_tokens": [
+       "ĠR",
+       "AS",
+       "PB",
+       "ERRY"
+      ]
+     }
+    ],
+    "blueberry": [
+     {
+      "text": "blueberry",
+      "tokens": [
+       "blue",
+       "berry"
+      ],
+      "ids": [
+       12481,
+       15717
+      ],
+      "raw_tokens": [
+       "blue",
+       "berry"
+      ]
+     },
+     {
+      "text": " blueberry",
+      "tokens": [
+       " blue",
+       "berry"
+      ],
+      "ids": [
+       6437,
+       15717
+      ],
+      "raw_tokens": [
+       "Ġblue",
+       "berry"
+      ]
+     },
+     {
+      "text": "Blueberry",
+      "tokens": [
+       "Blue",
+       "berry"
+      ],
+      "ids": [
+       10544,
+       15717
+      ],
+      "raw_tokens": [
+       "Blue",
+       "berry"
+      ]
+     },
+     {
+      "text": " Blueberry",
+      "tokens": [
+       " Blue",
+       "berry"
+      ],
+      "ids": [
+       8868,
+       15717
+      ],
+      "raw_tokens": [
+       "ĠBlue",
+       "berry"
+      ]
+     },
+     {
+      "text": "BLUEBERRY",
+      "tokens": [
+       "BLUE",
+       "B",
+       "ERRY"
+      ],
+      "ids": [
+       65430,
+       33,
+       73995
+      ],
+      "raw_tokens": [
+       "BLUE",
+       "B",
+       "ERRY"
+      ]
+     },
+     {
+      "text": " BLUEBERRY",
+      "tokens": [
+       " BLUE",
+       "B",
+       "ERRY"
+      ],
+      "ids": [
+       56992,
+       33,
+       73995
+      ],
+      "raw_tokens": [
+       "ĠBLUE",
+       "B",
+       "ERRY"
+      ]
+     }
+    ],
+    "Mississippi": [
+     {
+      "text": "mississippi",
+      "tokens": [
+       "miss",
+       "issippi"
+      ],
+      "ids": [
+       1869,
+       27126
+      ],
+      "raw_tokens": [
+       "miss",
+       "issippi"
+      ]
+     },
+     {
+      "text": " mississippi",
+      "tokens": [
+       " miss",
+       "issippi"
+      ],
+      "ids": [
+       3194,
+       27126
+      ],
+      "raw_tokens": [
+       "Ġmiss",
+       "issippi"
+      ]
+     },
+     {
+      "text": "Mississippi",
+      "tokens": [
+       "Miss",
+       "issippi"
+      ],
+      "ids": [
+       36412,
+       27126
+      ],
+      "raw_tokens": [
+       "Miss",
+       "issippi"
+      ]
+     },
+     {
+      "text": " Mississippi",
+      "tokens": [
+       " Mississippi"
+      ],
+      "ids": [
+       29538
+      ],
+      "raw_tokens": [
+       "ĠMississippi"
+      ]
+     },
+     {
+      "text": "MISSISSIPPI",
+      "tokens": [
+       "MISS",
+       "ISS",
+       "IP",
+       "PI"
+      ],
+      "ids": [
+       80570,
+       31949,
+       3378,
+       1932
+      ],
+      "raw_tokens": [
+       "MISS",
+       "ISS",
+       "IP",
+       "PI"
+      ]
+     },
+     {
+      "text": " MISSISSIPPI",
+      "tokens": [
+       " MISS",
+       "ISS",
+       "IP",
+       "PI"
+      ],
+      "ids": [
+       63847,
+       31949,
+       3378,
+       1932
+      ],
+      "raw_tokens": [
+       "ĠMISS",
+       "ISS",
+       "IP",
+       "PI"
+      ]
+     }
+    ],
+    "unbelievable": [
+     {
+      "text": "unbelievable",
+      "tokens": [
+       "un",
+       "belie",
+       "vable"
+      ],
+      "ids": [
+       359,
+       32898,
+       24694
+      ],
+      "raw_tokens": [
+       "un",
+       "belie",
+       "vable"
+      ]
+     },
+     {
+      "text": " unbelievable",
+      "tokens": [
+       " unbelievable"
+      ],
+      "ids": [
+       52229
+      ],
+      "raw_tokens": [
+       "Ġunbelievable"
+      ]
+     },
+     {
+      "text": "Unbelievable",
+      "tokens": [
+       "Un",
+       "belie",
+       "vable"
+      ],
+      "ids": [
+       1844,
+       32898,
+       24694
+      ],
+      "raw_tokens": [
+       "Un",
+       "belie",
+       "vable"
+      ]
+     },
+     {
+      "text": " Unbelievable",
+      "tokens": [
+       " Un",
+       "belie",
+       "vable"
+      ],
+      "ids": [
+       1252,
+       32898,
+       24694
+      ],
+      "raw_tokens": [
+       "ĠUn",
+       "belie",
+       "vable"
+      ]
+     },
+     {
+      "text": "UNBELIEVABLE",
+      "tokens": [
+       "UN",
+       "BEL",
+       "IE",
+       "V",
+       "ABLE"
+      ],
+      "ids": [
+       1899,
+       80101,
+       5484,
+       53,
+       3578
+      ],
+      "raw_tokens": [
+       "UN",
+       "BEL",
+       "IE",
+       "V",
+       "ABLE"
+      ]
+     },
+     {
+      "text": " UNBELIEVABLE",
+      "tokens": [
+       " UN",
+       "BEL",
+       "IE",
+       "V",
+       "ABLE"
+      ],
+      "ids": [
+       6781,
+       80101,
+       5484,
+       53,
+       3578
+      ],
+      "raw_tokens": [
+       "ĠUN",
+       "BEL",
+       "IE",
+       "V",
+       "ABLE"
+      ]
+     }
+    ],
+    "bookkeeper": [
+     {
+      "text": "bookkeeper",
+      "tokens": [
+       "book",
+       "keeper"
+      ],
+      "ids": [
+       2239,
+       19393
+      ],
+      "raw_tokens": [
+       "book",
+       "keeper"
+      ]
+     },
+     {
+      "text": " bookkeeper",
+      "tokens": [
+       " book",
+       "keeper"
+      ],
+      "ids": [
+       2363,
+       19393
+      ],
+      "raw_tokens": [
+       "Ġbook",
+       "keeper"
+      ]
+     },
+     {
+      "text": "Bookkeeper",
+      "tokens": [
+       "Book",
+       "keeper"
+      ],
+      "ids": [
+       7280,
+       19393
+      ],
+      "raw_tokens": [
+       "Book",
+       "keeper"
+      ]
+     },
+     {
+      "text": " Bookkeeper",
+      "tokens": [
+       " Book",
+       "keeper"
+      ],
+      "ids": [
+       6017,
+       19393
+      ],
+      "raw_tokens": [
+       "ĠBook",
+       "keeper"
+      ]
+     },
+     {
+      "text": "BOOKKEEPER",
+      "tokens": [
+       "BOOK",
+       "KEEP",
+       "ER"
+      ],
+      "ids": [
+       37725,
+       52901,
+       643
+      ],
+      "raw_tokens": [
+       "BOOK",
+       "KEEP",
+       "ER"
+      ]
+     },
+     {
+      "text": " BOOKKEEPER",
+      "tokens": [
+       " BOOK",
+       "KEEP",
+       "ER"
+      ],
+      "ids": [
+       48198,
+       52901,
+       643
+      ],
+      "raw_tokens": [
+       "ĠBOOK",
+       "KEEP",
+       "ER"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "mistralai/Mistral-7B-v0.1",
+   "used_by": "Mistral-7B-v0.1",
+   "vocab_size": 32000,
+   "library": "tokenizers 0.23.3",
+   "hf_commit": "27d67f1b5f57dc0953326b2601d68371d40ea8da",
+   "tokenizer_json_sha256": "11c08db21487c885d8c792180f0be237f6a261b89a46f128a6a80a3aa4bd1720",
+   "licence": {
+    "licence": "apache-2.0",
+    "source_url": "https://huggingface.co/mistralai/Mistral-7B-v0.1/blob/27d67f1b5f57dc0953326b2601d68371d40ea8da/README.md",
+    "licence_file_urls": []
+   },
+   "prompt": {
+    "text": "How many r's are in strawberry?",
+    "tokens": [
+     " How",
+     " many",
+     " r",
+     "'",
+     "s",
+     " are",
+     " in",
+     " straw",
+     "berry",
+     "?"
+    ],
+    "ids": [
+     1602,
+     1287,
+     408,
+     28742,
+     28713,
+     460,
+     297,
+     18393,
+     14233,
+     28804
+    ],
+    "raw_tokens": [
+     "▁How",
+     "▁many",
+     "▁r",
+     "'",
+     "s",
+     "▁are",
+     "▁in",
+     "▁straw",
+     "berry",
+     "?"
+    ]
+   },
+   "probes": {
+    "strawberry": [
+     {
+      "text": "strawberry",
+      "tokens": [
+       " straw",
+       "berry"
+      ],
+      "ids": [
+       18393,
+       14233
+      ],
+      "raw_tokens": [
+       "▁straw",
+       "berry"
+      ]
+     },
+     {
+      "text": " strawberry",
+      "tokens": [
+       " straw",
+       "berry"
+      ],
+      "ids": [
+       18393,
+       14233
+      ],
+      "raw_tokens": [
+       "▁straw",
+       "berry"
+      ]
+     },
+     {
+      "text": "Strawberry",
+      "tokens": [
+       " Str",
+       "aw",
+       "berry"
+      ],
+      "ids": [
+       3838,
+       1067,
+       14233
+      ],
+      "raw_tokens": [
+       "▁Str",
+       "aw",
+       "berry"
+      ]
+     },
+     {
+      "text": " Strawberry",
+      "tokens": [
+       " Str",
+       "aw",
+       "berry"
+      ],
+      "ids": [
+       3838,
+       1067,
+       14233
+      ],
+      "raw_tokens": [
+       "▁Str",
+       "aw",
+       "berry"
+      ]
+     },
+     {
+      "text": "STRAWBERRY",
+      "tokens": [
+       " STR",
+       "AW",
+       "B",
+       "ERR",
+       "Y"
+      ],
+      "ids": [
+       17235,
+       17901,
+       28760,
+       2986,
+       28802
+      ],
+      "raw_tokens": [
+       "▁STR",
+       "AW",
+       "B",
+       "ERR",
+       "Y"
+      ]
+     },
+     {
+      "text": " STRAWBERRY",
+      "tokens": [
+       " STR",
+       "AW",
+       "B",
+       "ERR",
+       "Y"
+      ],
+      "ids": [
+       17235,
+       17901,
+       28760,
+       2986,
+       28802
+      ],
+      "raw_tokens": [
+       "▁STR",
+       "AW",
+       "B",
+       "ERR",
+       "Y"
+      ]
+     }
+    ],
+    "raspberry": [
+     {
+      "text": "raspberry",
+      "tokens": [
+       " r",
+       "asp",
+       "berry"
+      ],
+      "ids": [
+       408,
+       10124,
+       14233
+      ],
+      "raw_tokens": [
+       "▁r",
+       "asp",
+       "berry"
+      ]
+     },
+     {
+      "text": " raspberry",
+      "tokens": [
+       " r",
+       "asp",
+       "berry"
+      ],
+      "ids": [
+       408,
+       10124,
+       14233
+      ],
+      "raw_tokens": [
+       "▁r",
+       "asp",
+       "berry"
+      ]
+     },
+     {
+      "text": "Raspberry",
+      "tokens": [
+       " R",
+       "asp",
+       "berry"
+      ],
+      "ids": [
+       399,
+       10124,
+       14233
+      ],
+      "raw_tokens": [
+       "▁R",
+       "asp",
+       "berry"
+      ]
+     },
+     {
+      "text": " Raspberry",
+      "tokens": [
+       " R",
+       "asp",
+       "berry"
+      ],
+      "ids": [
+       399,
+       10124,
+       14233
+      ],
+      "raw_tokens": [
+       "▁R",
+       "asp",
+       "berry"
+      ]
+     },
+     {
+      "text": "RASPBERRY",
+      "tokens": [
+       " R",
+       "AS",
+       "PB",
+       "ERR",
+       "Y"
+      ],
+      "ids": [
+       399,
+       2109,
+       27982,
+       2986,
+       28802
+      ],
+      "raw_tokens": [
+       "▁R",
+       "AS",
+       "PB",
+       "ERR",
+       "Y"
+      ]
+     },
+     {
+      "text": " RASPBERRY",
+      "tokens": [
+       " R",
+       "AS",
+       "PB",
+       "ERR",
+       "Y"
+      ],
+      "ids": [
+       399,
+       2109,
+       27982,
+       2986,
+       28802
+      ],
+      "raw_tokens": [
+       "▁R",
+       "AS",
+       "PB",
+       "ERR",
+       "Y"
+      ]
+     }
+    ],
+    "blueberry": [
+     {
+      "text": "blueberry",
+      "tokens": [
+       " blue",
+       "berry"
+      ],
+      "ids": [
+       5045,
+       14233
+      ],
+      "raw_tokens": [
+       "▁blue",
+       "berry"
+      ]
+     },
+     {
+      "text": " blueberry",
+      "tokens": [
+       " blue",
+       "berry"
+      ],
+      "ids": [
+       5045,
+       14233
+      ],
+      "raw_tokens": [
+       "▁blue",
+       "berry"
+      ]
+     },
+     {
+      "text": "Blueberry",
+      "tokens": [
+       " Blue",
+       "berry"
+      ],
+      "ids": [
+       8836,
+       14233
+      ],
+      "raw_tokens": [
+       "▁Blue",
+       "berry"
+      ]
+     },
+     {
+      "text": " Blueberry",
+      "tokens": [
+       " Blue",
+       "berry"
+      ],
+      "ids": [
+       8836,
+       14233
+      ],
+      "raw_tokens": [
+       "▁Blue",
+       "berry"
+      ]
+     },
+     {
+      "text": "BLUEBERRY",
+      "tokens": [
+       " BL",
+       "UE",
+       "B",
+       "ERR",
+       "Y"
+      ],
+      "ids": [
+       19987,
+       3027,
+       28760,
+       2986,
+       28802
+      ],
+      "raw_tokens": [
+       "▁BL",
+       "UE",
+       "B",
+       "ERR",
+       "Y"
+      ]
+     },
+     {
+      "text": " BLUEBERRY",
+      "tokens": [
+       " BL",
+       "UE",
+       "B",
+       "ERR",
+       "Y"
+      ],
+      "ids": [
+       19987,
+       3027,
+       28760,
+       2986,
+       28802
+      ],
+      "raw_tokens": [
+       "▁BL",
+       "UE",
+       "B",
+       "ERR",
+       "Y"
+      ]
+     }
+    ],
+    "Mississippi": [
+     {
+      "text": "mississippi",
+      "tokens": [
+       " miss",
+       "iss",
+       "ippi"
+      ],
+      "ids": [
+       3178,
+       815,
+       17609
+      ],
+      "raw_tokens": [
+       "▁miss",
+       "iss",
+       "ippi"
+      ]
+     },
+     {
+      "text": " mississippi",
+      "tokens": [
+       " miss",
+       "iss",
+       "ippi"
+      ],
+      "ids": [
+       3178,
+       815,
+       17609
+      ],
+      "raw_tokens": [
+       "▁miss",
+       "iss",
+       "ippi"
+      ]
+     },
+     {
+      "text": "Mississippi",
+      "tokens": [
+       " Mississippi"
+      ],
+      "ids": [
+       20455
+      ],
+      "raw_tokens": [
+       "▁Mississippi"
+      ]
+     },
+     {
+      "text": " Mississippi",
+      "tokens": [
+       " Mississippi"
+      ],
+      "ids": [
+       20455
+      ],
+      "raw_tokens": [
+       "▁Mississippi"
+      ]
+     },
+     {
+      "text": "MISSISSIPPI",
+      "tokens": [
+       " MI",
+       "SS",
+       "I",
+       "SS",
+       "IP",
+       "PI"
+      ],
+      "ids": [
+       17808,
+       1383,
+       28737,
+       1383,
+       2665,
+       3110
+      ],
+      "raw_tokens": [
+       "▁MI",
+       "SS",
+       "I",
+       "SS",
+       "IP",
+       "PI"
+      ]
+     },
+     {
+      "text": " MISSISSIPPI",
+      "tokens": [
+       " MI",
+       "SS",
+       "I",
+       "SS",
+       "IP",
+       "PI"
+      ],
+      "ids": [
+       17808,
+       1383,
+       28737,
+       1383,
+       2665,
+       3110
+      ],
+      "raw_tokens": [
+       "▁MI",
+       "SS",
+       "I",
+       "SS",
+       "IP",
+       "PI"
+      ]
+     }
+    ],
+    "unbelievable": [
+     {
+      "text": "unbelievable",
+      "tokens": [
+       " un",
+       "bel",
+       "iev",
+       "able"
+      ],
+      "ids": [
+       521,
+       7244,
+       16198,
+       522
+      ],
+      "raw_tokens": [
+       "▁un",
+       "bel",
+       "iev",
+       "able"
+      ]
+     },
+     {
+      "text": " unbelievable",
+      "tokens": [
+       " un",
+       "bel",
+       "iev",
+       "able"
+      ],
+      "ids": [
+       521,
+       7244,
+       16198,
+       522
+      ],
+      "raw_tokens": [
+       "▁un",
+       "bel",
+       "iev",
+       "able"
+      ]
+     },
+     {
+      "text": "Unbelievable",
+      "tokens": [
+       " Un",
+       "bel",
+       "iev",
+       "able"
+      ],
+      "ids": [
+       935,
+       7244,
+       16198,
+       522
+      ],
+      "raw_tokens": [
+       "▁Un",
+       "bel",
+       "iev",
+       "able"
+      ]
+     },
+     {
+      "text": " Unbelievable",
+      "tokens": [
+       " Un",
+       "bel",
+       "iev",
+       "able"
+      ],
+      "ids": [
+       935,
+       7244,
+       16198,
+       522
+      ],
+      "raw_tokens": [
+       "▁Un",
+       "bel",
+       "iev",
+       "able"
+      ]
+     },
+     {
+      "text": "UNBELIEVABLE",
+      "tokens": [
+       " UN",
+       "B",
+       "EL",
+       "I",
+       "EV",
+       "ABLE"
+      ],
+      "ids": [
+       7922,
+       28760,
+       2980,
+       28737,
+       7321,
+       4327
+      ],
+      "raw_tokens": [
+       "▁UN",
+       "B",
+       "EL",
+       "I",
+       "EV",
+       "ABLE"
+      ]
+     },
+     {
+      "text": " UNBELIEVABLE",
+      "tokens": [
+       " UN",
+       "B",
+       "EL",
+       "I",
+       "EV",
+       "ABLE"
+      ],
+      "ids": [
+       7922,
+       28760,
+       2980,
+       28737,
+       7321,
+       4327
+      ],
+      "raw_tokens": [
+       "▁UN",
+       "B",
+       "EL",
+       "I",
+       "EV",
+       "ABLE"
+      ]
+     }
+    ],
+    "bookkeeper": [
+     {
+      "text": "bookkeeper",
+      "tokens": [
+       " book",
+       "keeper"
+      ],
+      "ids": [
+       1820,
+       18740
+      ],
+      "raw_tokens": [
+       "▁book",
+       "keeper"
+      ]
+     },
+     {
+      "text": " bookkeeper",
+      "tokens": [
+       " book",
+       "keeper"
+      ],
+      "ids": [
+       1820,
+       18740
+      ],
+      "raw_tokens": [
+       "▁book",
+       "keeper"
+      ]
+     },
+     {
+      "text": "Bookkeeper",
+      "tokens": [
+       " Book",
+       "keeper"
+      ],
+      "ids": [
+       5737,
+       18740
+      ],
+      "raw_tokens": [
+       "▁Book",
+       "keeper"
+      ]
+     },
+     {
+      "text": " Bookkeeper",
+      "tokens": [
+       " Book",
+       "keeper"
+      ],
+      "ids": [
+       5737,
+       18740
+      ],
+      "raw_tokens": [
+       "▁Book",
+       "keeper"
+      ]
+     },
+     {
+      "text": "BOOKKEEPER",
+      "tokens": [
+       " BO",
+       "OK",
+       "KE",
+       "E",
+       "PER"
+      ],
+      "ids": [
+       12070,
+       4903,
+       4457,
+       28749,
+       6512
+      ],
+      "raw_tokens": [
+       "▁BO",
+       "OK",
+       "KE",
+       "E",
+       "PER"
+      ]
+     },
+     {
+      "text": " BOOKKEEPER",
+      "tokens": [
+       " BO",
+       "OK",
+       "KE",
+       "E",
+       "PER"
+      ],
+      "ids": [
+       12070,
+       4903,
+       4457,
+       28749,
+       6512
+      ],
+      "raw_tokens": [
+       "▁BO",
+       "OK",
+       "KE",
+       "E",
+       "PER"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "HuggingFaceTB/SmolLM2-135M",
+   "used_by": "SmolLM2-135M",
+   "vocab_size": 49152,
+   "library": "tokenizers 0.23.3",
+   "hf_commit": "93efa2f097d58c2a74874c7e644dbc9b0cee75a2",
+   "tokenizer_json_sha256": "9ca9acddb6525a194ec8ac7a87f24fbba7232a9a15ffa1af0c1224fcd888e47c",
+   "licence": {
+    "licence": "apache-2.0",
+    "source_url": "https://huggingface.co/HuggingFaceTB/SmolLM2-135M/blob/93efa2f097d58c2a74874c7e644dbc9b0cee75a2/README.md",
+    "licence_file_urls": []
+   },
+   "prompt": {
+    "text": "How many r's are in strawberry?",
+    "tokens": [
+     "How",
+     " many",
+     " r",
+     "'s",
+     " are",
+     " in",
+     " strawberry",
+     "?"
+    ],
+    "ids": [
+     2020,
+     800,
+     412,
+     506,
+     359,
+     281,
+     35199,
+     47
+    ],
+    "raw_tokens": [
+     "How",
+     "Ġmany",
+     "Ġr",
+     "'s",
+     "Ġare",
+     "Ġin",
+     "Ġstrawberry",
+     "?"
+    ]
+   },
+   "probes": {
+    "strawberry": [
+     {
+      "text": "strawberry",
+      "tokens": [
+       "st",
+       "raw",
+       "berry"
+      ],
+      "ids": [
+       302,
+       1709,
+       9500
+      ],
+      "raw_tokens": [
+       "st",
+       "raw",
+       "berry"
+      ]
+     },
+     {
+      "text": " strawberry",
+      "tokens": [
+       " strawberry"
+      ],
+      "ids": [
+       35199
+      ],
+      "raw_tokens": [
+       "Ġstrawberry"
+      ]
+     },
+     {
+      "text": "Strawberry",
+      "tokens": [
+       "St",
+       "raw",
+       "berry"
+      ],
+      "ids": [
+       1393,
+       1709,
+       9500
+      ],
+      "raw_tokens": [
+       "St",
+       "raw",
+       "berry"
+      ]
+     },
+     {
+      "text": " Strawberry",
+      "tokens": [
+       " Straw",
+       "berry"
+      ],
+      "ids": [
+       37756,
+       9500
+      ],
+      "raw_tokens": [
+       "ĠStraw",
+       "berry"
+      ]
+     },
+     {
+      "text": "STRAWBERRY",
+      "tokens": [
+       "ST",
+       "RAW",
+       "B",
+       "ERR",
+       "Y"
+      ],
+      "ids": [
+       3127,
+       42634,
+       50,
+       15297,
+       73
+      ],
+      "raw_tokens": [
+       "ST",
+       "RAW",
+       "B",
+       "ERR",
+       "Y"
+      ]
+     },
+     {
+      "text": " STRAWBERRY",
+      "tokens": [
+       " ST",
+       "RAW",
+       "B",
+       "ERR",
+       "Y"
+      ],
+      "ids": [
+       5022,
+       42634,
+       50,
+       15297,
+       73
+      ],
+      "raw_tokens": [
+       "ĠST",
+       "RAW",
+       "B",
+       "ERR",
+       "Y"
+      ]
+     }
+    ],
+    "raspberry": [
+     {
+      "text": "raspberry",
+      "tokens": [
+       "r",
+       "aspberry"
+      ],
+      "ids": [
+       98,
+       25625
+      ],
+      "raw_tokens": [
+       "r",
+       "aspberry"
+      ]
+     },
+     {
+      "text": " raspberry",
+      "tokens": [
+       " r",
+       "aspberry"
+      ],
+      "ids": [
+       412,
+       25625
+      ],
+      "raw_tokens": [
+       "Ġr",
+       "aspberry"
+      ]
+     },
+     {
+      "text": "Raspberry",
+      "tokens": [
+       "R",
+       "aspberry"
+      ],
+      "ids": [
+       66,
+       25625
+      ],
+      "raw_tokens": [
+       "R",
+       "aspberry"
+      ]
+     },
+     {
+      "text": " Raspberry",
+      "tokens": [
+       " Raspberry"
+      ],
+      "ids": [
+       32236
+      ],
+      "raw_tokens": [
+       "ĠRaspberry"
+      ]
+     },
+     {
+      "text": "RASPBERRY",
+      "tokens": [
+       "R",
+       "ASP",
+       "B",
+       "ERR",
+       "Y"
+      ],
+      "ids": [
+       66,
+       41086,
+       50,
+       15297,
+       73
+      ],
+      "raw_tokens": [
+       "R",
+       "ASP",
+       "B",
+       "ERR",
+       "Y"
+      ]
+     },
+     {
+      "text": " RASPBERRY",
+      "tokens": [
+       " R",
+       "ASP",
+       "B",
+       "ERR",
+       "Y"
+      ],
+      "ids": [
+       428,
+       41086,
+       50,
+       15297,
+       73
+      ],
+      "raw_tokens": [
+       "ĠR",
+       "ASP",
+       "B",
+       "ERR",
+       "Y"
+      ]
+     }
+    ],
+    "blueberry": [
+     {
+      "text": "blueberry",
+      "tokens": [
+       "blue",
+       "berry"
+      ],
+      "ids": [
+       16591,
+       9500
+      ],
+      "raw_tokens": [
+       "blue",
+       "berry"
+      ]
+     },
+     {
+      "text": " blueberry",
+      "tokens": [
+       " blue",
+       "berry"
+      ],
+      "ids": [
+       4461,
+       9500
+      ],
+      "raw_tokens": [
+       "Ġblue",
+       "berry"
+      ]
+     },
+     {
+      "text": "Blueberry",
+      "tokens": [
+       "Blue",
+       "berry"
+      ],
+      "ids": [
+       23390,
+       9500
+      ],
+      "raw_tokens": [
+       "Blue",
+       "berry"
+      ]
+     },
+     {
+      "text": " Blueberry",
+      "tokens": [
+       " Blue",
+       "berry"
+      ],
+      "ids": [
+       10062,
+       9500
+      ],
+      "raw_tokens": [
+       "ĠBlue",
+       "berry"
+      ]
+     },
+     {
+      "text": "BLUEBERRY",
+      "tokens": [
+       "BL",
+       "UE",
+       "B",
+       "ERR",
+       "Y"
+      ],
+      "ids": [
+       11471,
+       16049,
+       50,
+       15297,
+       73
+      ],
+      "raw_tokens": [
+       "BL",
+       "UE",
+       "B",
+       "ERR",
+       "Y"
+      ]
+     },
+     {
+      "text": " BLUEBERRY",
+      "tokens": [
+       " BL",
+       "UE",
+       "B",
+       "ERR",
+       "Y"
+      ],
+      "ids": [
+       20239,
+       16049,
+       50,
+       15297,
+       73
+      ],
+      "raw_tokens": [
+       "ĠBL",
+       "UE",
+       "B",
+       "ERR",
+       "Y"
+      ]
+     }
+    ],
+    "Mississippi": [
+     {
+      "text": "mississippi",
+      "tokens": [
+       "miss",
+       "issippi"
+      ],
+      "ids": [
+       8637,
+       11430
+      ],
+      "raw_tokens": [
+       "miss",
+       "issippi"
+      ]
+     },
+     {
+      "text": " mississippi",
+      "tokens": [
+       " miss",
+       "issippi"
+      ],
+      "ids": [
+       3956,
+       11430
+      ],
+      "raw_tokens": [
+       "Ġmiss",
+       "issippi"
+      ]
+     },
+     {
+      "text": "Mississippi",
+      "tokens": [
+       "Miss",
+       "issippi"
+      ],
+      "ids": [
+       21361,
+       11430
+      ],
+      "raw_tokens": [
+       "Miss",
+       "issippi"
+      ]
+     },
+     {
+      "text": " Mississippi",
+      "tokens": [
+       " Mississippi"
+      ],
+      "ids": [
+       11861
+      ],
+      "raw_tokens": [
+       "ĠMississippi"
+      ]
+     },
+     {
+      "text": "MISSISSIPPI",
+      "tokens": [
+       "M",
+       "ISS",
+       "ISS",
+       "IP",
+       "PI"
+      ],
+      "ids": [
+       61,
+       25317,
+       25317,
+       6188,
+       19427
+      ],
+      "raw_tokens": [
+       "M",
+       "ISS",
+       "ISS",
+       "IP",
+       "PI"
+      ]
+     },
+     {
+      "text": " MISSISSIPPI",
+      "tokens": [
+       " M",
+       "ISS",
+       "ISS",
+       "IP",
+       "PI"
+      ],
+      "ids": [
+       372,
+       25317,
+       25317,
+       6188,
+       19427
+      ],
+      "raw_tokens": [
+       "ĠM",
+       "ISS",
+       "ISS",
+       "IP",
+       "PI"
+      ]
+     }
+    ],
+    "unbelievable": [
+     {
+      "text": "unbelievable",
+      "tokens": [
+       "un",
+       "belie",
+       "vable"
+      ],
+      "ids": [
+       419,
+       23282,
+       16275
+      ],
+      "raw_tokens": [
+       "un",
+       "belie",
+       "vable"
+      ]
+     },
+     {
+      "text": " unbelievable",
+      "tokens": [
+       " unbelie",
+       "vable"
+      ],
+      "ids": [
+       33282,
+       16275
+      ],
+      "raw_tokens": [
+       "Ġunbelie",
+       "vable"
+      ]
+     },
+     {
+      "text": "Unbelievable",
+      "tokens": [
+       "Un",
+       "belie",
+       "vable"
+      ],
+      "ids": [
+       3706,
+       23282,
+       16275
+      ],
+      "raw_tokens": [
+       "Un",
+       "belie",
+       "vable"
+      ]
+     },
+     {
+      "text": " Unbelievable",
+      "tokens": [
+       " Un",
+       "belie",
+       "vable"
+      ],
+      "ids": [
+       810,
+       23282,
+       16275
+      ],
+      "raw_tokens": [
+       "ĠUn",
+       "belie",
+       "vable"
+      ]
+     },
+     {
+      "text": "UNBELIEVABLE",
+      "tokens": [
+       "UN",
+       "B",
+       "EL",
+       "I",
+       "EV",
+       "ABLE"
+      ],
+      "ids": [
+       5633,
+       50,
+       4210,
+       57,
+       16091,
+       16121
+      ],
+      "raw_tokens": [
+       "UN",
+       "B",
+       "EL",
+       "I",
+       "EV",
+       "ABLE"
+      ]
+     },
+     {
+      "text": " UNBELIEVABLE",
+      "tokens": [
+       " UN",
+       "B",
+       "EL",
+       "I",
+       "EV",
+       "ABLE"
+      ],
+      "ids": [
+       4954,
+       50,
+       4210,
+       57,
+       16091,
+       16121
+      ],
+      "raw_tokens": [
+       "ĠUN",
+       "B",
+       "EL",
+       "I",
+       "EV",
+       "ABLE"
+      ]
+     }
+    ],
+    "bookkeeper": [
+     {
+      "text": "bookkeeper",
+      "tokens": [
+       "book",
+       "keeper"
+      ],
+      "ids": [
+       3767,
+       21306
+      ],
+      "raw_tokens": [
+       "book",
+       "keeper"
+      ]
+     },
+     {
+      "text": " bookkeeper",
+      "tokens": [
+       " book",
+       "keeper"
+      ],
+      "ids": [
+       1863,
+       21306
+      ],
+      "raw_tokens": [
+       "Ġbook",
+       "keeper"
+      ]
+     },
+     {
+      "text": "Bookkeeper",
+      "tokens": [
+       "Book",
+       "keeper"
+      ],
+      "ids": [
+       15654,
+       21306
+      ],
+      "raw_tokens": [
+       "Book",
+       "keeper"
+      ]
+     },
+     {
+      "text": " Bookkeeper",
+      "tokens": [
+       " Book",
+       "keeper"
+      ],
+      "ids": [
+       6226,
+       21306
+      ],
+      "raw_tokens": [
+       "ĠBook",
+       "keeper"
+      ]
+     },
+     {
+      "text": "BOOKKEEPER",
+      "tokens": [
+       "BO",
+       "OK",
+       "KE",
+       "EP",
+       "ER"
+      ],
+      "ids": [
+       13950,
+       13663,
+       9620,
+       7293,
+       1754
+      ],
+      "raw_tokens": [
+       "BO",
+       "OK",
+       "KE",
+       "EP",
+       "ER"
+      ]
+     },
+     {
+      "text": " BOOKKEEPER",
+      "tokens": [
+       " BO",
+       "OK",
+       "KE",
+       "EP",
+       "ER"
+      ],
+      "ids": [
+       26830,
+       13663,
+       9620,
+       7293,
+       1754
+      ],
+      "raw_tokens": [
+       "ĠBO",
+       "OK",
+       "KE",
+       "EP",
+       "ER"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "microsoft/Phi-4-mini-instruct",
+   "used_by": "Phi-4-mini-instruct",
+   "vocab_size": 200029,
+   "library": "tokenizers 0.23.3",
+   "hf_commit": "cfbefacb99257ffa30c83adab238a50856ac3083",
+   "tokenizer_json_sha256": "382cc235b56c725945e149cc25f191da667c836655efd0857b004320e90e91ea",
+   "licence": {
+    "licence": "mit",
+    "source_url": "https://huggingface.co/microsoft/Phi-4-mini-instruct/blob/cfbefacb99257ffa30c83adab238a50856ac3083/README.md",
+    "licence_file_urls": [
+     "https://huggingface.co/microsoft/Phi-4-mini-instruct/blob/cfbefacb99257ffa30c83adab238a50856ac3083/LICENSE"
+    ]
+   },
+   "prompt": {
+    "text": "How many r's are in strawberry?",
+    "tokens": [
+     "How",
+     " many",
+     " r",
+     "'s",
+     " are",
+     " in",
+     " strawberry",
+     "?"
+    ],
+    "ids": [
+     5299,
+     1991,
+     428,
+     885,
+     553,
+     306,
+     101830,
+     30
+    ],
+    "raw_tokens": [
+     "How",
+     "Ġmany",
+     "Ġr",
+     "'s",
+     "Ġare",
+     "Ġin",
+     "Ġstrawberry",
+     "?"
+    ]
+   },
+   "probes": {
+    "strawberry": [
+     {
+      "text": "strawberry",
+      "tokens": [
+       "st",
+       "raw",
+       "berry"
+      ],
+      "ids": [
+       302,
+       1618,
+       19772
+      ],
+      "raw_tokens": [
+       "st",
+       "raw",
+       "berry"
+      ]
+     },
+     {
+      "text": " strawberry",
+      "tokens": [
+       " strawberry"
+      ],
+      "ids": [
+       101830
+      ],
+      "raw_tokens": [
+       "Ġstrawberry"
+      ]
+     },
+     {
+      "text": "Strawberry",
+      "tokens": [
+       "Str",
+       "aw",
+       "berry"
+      ],
+      "ids": [
+       3504,
+       1134,
+       19772
+      ],
+      "raw_tokens": [
+       "Str",
+       "aw",
+       "berry"
+      ]
+     },
+     {
+      "text": " Strawberry",
+      "tokens": [
+       " Strawberry"
+      ],
+      "ids": [
+       138322
+      ],
+      "raw_tokens": [
+       "ĠStrawberry"
+      ]
+     },
+     {
+      "text": "STRAWBERRY",
+      "tokens": [
+       "ST",
+       "RAW",
+       "B",
+       "ERRY"
+      ],
+      "ids": [
+       1117,
+       46176,
+       33,
+       132354
+      ],
+      "raw_tokens": [
+       "ST",
+       "RAW",
+       "B",
+       "ERRY"
+      ]
+     },
+     {
+      "text": " STRAWBERRY",
+      "tokens": [
+       " STR",
+       "AW",
+       "B",
+       "ERRY"
+      ],
+      "ids": [
+       24360,
+       24853,
+       33,
+       132354
+      ],
+      "raw_tokens": [
+       "ĠSTR",
+       "AW",
+       "B",
+       "ERRY"
+      ]
+     }
+    ],
+    "raspberry": [
+     {
+      "text": "raspberry",
+      "tokens": [
+       "ras",
+       "p",
+       "berry"
+      ],
+      "ids": [
+       6285,
+       79,
+       19772
+      ],
+      "raw_tokens": [
+       "ras",
+       "p",
+       "berry"
+      ]
+     },
+     {
+      "text": " raspberry",
+      "tokens": [
+       " raspberry"
+      ],
+      "ids": [
+       134404
+      ],
+      "raw_tokens": [
+       "Ġraspberry"
+      ]
+     },
+     {
+      "text": "Raspberry",
+      "tokens": [
+       "R",
+       "aspberry"
+      ],
+      "ids": [
+       49,
+       59213
+      ],
+      "raw_tokens": [
+       "R",
+       "aspberry"
+      ]
+     },
+     {
+      "text": " Raspberry",
+      "tokens": [
+       " Raspberry"
+      ],
+      "ids": [
+       87711
+      ],
+      "raw_tokens": [
+       "ĠRaspberry"
+      ]
+     },
+     {
+      "text": "RASPBERRY",
+      "tokens": [
+       "RAS",
+       "PB",
+       "ERRY"
+      ],
+      "ids": [
+       137586,
+       58530,
+       132354
+      ],
+      "raw_tokens": [
+       "RAS",
+       "PB",
+       "ERRY"
+      ]
+     },
+     {
+      "text": " RASPBERRY",
+      "tokens": [
+       " R",
+       "AS",
+       "PB",
+       "ERRY"
+      ],
+      "ids": [
+       460,
+       2158,
+       58530,
+       132354
+      ],
+      "raw_tokens": [
+       "ĠR",
+       "AS",
+       "PB",
+       "ERRY"
+      ]
+     }
+    ],
+    "blueberry": [
+     {
+      "text": "blueberry",
+      "tokens": [
+       "blue",
+       "berry"
+      ],
+      "ids": [
+       18789,
+       19772
+      ],
+      "raw_tokens": [
+       "blue",
+       "berry"
+      ]
+     },
+     {
+      "text": " blueberry",
+      "tokens": [
+       " blueberry"
+      ],
+      "ids": [
+       177717
+      ],
+      "raw_tokens": [
+       "Ġblueberry"
+      ]
+     },
+     {
+      "text": "Blueberry",
+      "tokens": [
+       "Blue",
+       "berry"
+      ],
+      "ids": [
+       15957,
+       19772
+      ],
+      "raw_tokens": [
+       "Blue",
+       "berry"
+      ]
+     },
+     {
+      "text": " Blueberry",
+      "tokens": [
+       " Blue",
+       "berry"
+      ],
+      "ids": [
+       11942,
+       19772
+      ],
+      "raw_tokens": [
+       "ĠBlue",
+       "berry"
+      ]
+     },
+     {
+      "text": "BLUEBERRY",
+      "tokens": [
+       "BLUE",
+       "B",
+       "ERRY"
+      ],
+      "ids": [
+       134698,
+       33,
+       132354
+      ],
+      "raw_tokens": [
+       "BLUE",
+       "B",
+       "ERRY"
+      ]
+     },
+     {
+      "text": " BLUEBERRY",
+      "tokens": [
+       " BLUE",
+       "B",
+       "ERRY"
+      ],
+      "ids": [
+       110151,
+       33,
+       132354
+      ],
+      "raw_tokens": [
+       "ĠBLUE",
+       "B",
+       "ERRY"
+      ]
+     }
+    ],
+    "Mississippi": [
+     {
+      "text": "mississippi",
+      "tokens": [
+       "miss",
+       "issippi"
+      ],
+      "ids": [
+       15399,
+       43884
+      ],
+      "raw_tokens": [
+       "miss",
+       "issippi"
+      ]
+     },
+     {
+      "text": " mississippi",
+      "tokens": [
+       " miss",
+       "issippi"
+      ],
+      "ids": [
+       5141,
+       43884
+      ],
+      "raw_tokens": [
+       "Ġmiss",
+       "issippi"
+      ]
+     },
+     {
+      "text": "Mississippi",
+      "tokens": [
+       "Miss",
+       "issippi"
+      ],
+      "ids": [
+       40677,
+       43884
+      ],
+      "raw_tokens": [
+       "Miss",
+       "issippi"
+      ]
+     },
+     {
+      "text": " Mississippi",
+      "tokens": [
+       " Mississippi"
+      ],
+      "ids": [
+       48355
+      ],
+      "raw_tokens": [
+       "ĠMississippi"
+      ]
+     },
+     {
+      "text": "MISSISSIPPI",
+      "tokens": [
+       "MISS",
+       "ISS",
+       "IP",
+       "PI"
+      ],
+      "ids": [
+       113585,
+       20720,
+       3799,
+       5479
+      ],
+      "raw_tokens": [
+       "MISS",
+       "ISS",
+       "IP",
+       "PI"
+      ]
+     },
+     {
+      "text": " MISSISSIPPI",
+      "tokens": [
+       " MISS",
+       "ISS",
+       "IP",
+       "PI"
+      ],
+      "ids": [
+       170085,
+       20720,
+       3799,
+       5479
+      ],
+      "raw_tokens": [
+       "ĠMISS",
+       "ISS",
+       "IP",
+       "PI"
+      ]
+     }
+    ],
+    "unbelievable": [
+     {
+      "text": "unbelievable",
+      "tokens": [
+       "un",
+       "bel",
+       "ievable"
+      ],
+      "ids": [
+       373,
+       9880,
+       45794
+      ],
+      "raw_tokens": [
+       "un",
+       "bel",
+       "ievable"
+      ]
+     },
+     {
+      "text": " unbelievable",
+      "tokens": [
+       " unbelievable"
+      ],
+      "ids": [
+       83614
+      ],
+      "raw_tokens": [
+       "Ġunbelievable"
+      ]
+     },
+     {
+      "text": "Unbelievable",
+      "tokens": [
+       "Un",
+       "bel",
+       "ievable"
+      ],
+      "ids": [
+       2265,
+       9880,
+       45794
+      ],
+      "raw_tokens": [
+       "Un",
+       "bel",
+       "ievable"
+      ]
+     },
+     {
+      "text": " Unbelievable",
+      "tokens": [
+       " Un",
+       "bel",
+       "ievable"
+      ],
+      "ids": [
+       1367,
+       9880,
+       45794
+      ],
+      "raw_tokens": [
+       "ĠUn",
+       "bel",
+       "ievable"
+      ]
+     },
+     {
+      "text": "UNBELIEVABLE",
+      "tokens": [
+       "UN",
+       "BEL",
+       "IE",
+       "V",
+       "ABLE"
+      ],
+      "ids": [
+       2926,
+       145944,
+       7654,
+       53,
+       6606
+      ],
+      "raw_tokens": [
+       "UN",
+       "BEL",
+       "IE",
+       "V",
+       "ABLE"
+      ]
+     },
+     {
+      "text": " UNBELIEVABLE",
+      "tokens": [
+       " UN",
+       "BEL",
+       "IE",
+       "V",
+       "ABLE"
+      ],
+      "ids": [
+       9014,
+       145944,
+       7654,
+       53,
+       6606
+      ],
+      "raw_tokens": [
+       "ĠUN",
+       "BEL",
+       "IE",
+       "V",
+       "ABLE"
+      ]
+     }
+    ],
+    "bookkeeper": [
+     {
+      "text": "bookkeeper",
+      "tokens": [
+       "book",
+       "keeper"
+      ],
+      "ids": [
+       3092,
+       41968
+      ],
+      "raw_tokens": [
+       "book",
+       "keeper"
+      ]
+     },
+     {
+      "text": " bookkeeper",
+      "tokens": [
+       " book",
+       "keeper"
+      ],
+      "ids": [
+       2392,
+       41968
+      ],
+      "raw_tokens": [
+       "Ġbook",
+       "keeper"
+      ]
+     },
+     {
+      "text": "Bookkeeper",
+      "tokens": [
+       "Book",
+       "keeper"
+      ],
+      "ids": [
+       6904,
+       41968
+      ],
+      "raw_tokens": [
+       "Book",
+       "keeper"
+      ]
+     },
+     {
+      "text": " Bookkeeper",
+      "tokens": [
+       " Book",
+       "keeper"
+      ],
+      "ids": [
+       6951,
+       41968
+      ],
+      "raw_tokens": [
+       "ĠBook",
+       "keeper"
+      ]
+     },
+     {
+      "text": "BOOKKEEPER",
+      "tokens": [
+       "BOOK",
+       "KEEP",
+       "ER"
+      ],
+      "ids": [
+       51419,
+       119145,
+       866
+      ],
+      "raw_tokens": [
+       "BOOK",
+       "KEEP",
+       "ER"
+      ]
+     },
+     {
+      "text": " BOOKKEEPER",
+      "tokens": [
+       " BOOK",
+       "KEEP",
+       "ER"
+      ],
+      "ids": [
+       58863,
+       119145,
+       866
+      ],
+      "raw_tokens": [
+       "ĠBOOK",
+       "KEEP",
+       "ER"
+      ]
+     }
+    ]
+   }
+  }
+ ]
+}

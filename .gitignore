@@ -1,0 +1,8 @@
+# The downloaded books (Project Gutenberg's files; run_all.py fetches them).
+data/
+# Results of `run_all.py --quick` (a smoke test, not the real numbers).
+results/quick/
+.venv/
+__pycache__/
+.pytest_cache/
+__marimo__/

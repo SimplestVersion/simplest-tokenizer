@@ -1,0 +1,140 @@
+{
+ "meta": {
+  "written_at": "2026-11-21T09:58:25+00:00",
+  "project_version": "0.1.0",
+  "libraries": {
+   "python": "3.14.8",
+   "tiktoken": "0.14.0",
+   "tokenizers": "0.23.3",
+   "huggingface-hub": "2.4.0",
+   "marimo": "0.25.2",
+   "torch": "2.15.0",
+   "transformers": "5.23.0"
+  },
+  "machine": {
+   "os": "Linux x86_64",
+   "cpu": "13th Gen Intel(R) Core(TM) i7-13700F",
+   "cpu_count": 24
+  },
+  "settings": {
+   "TRAINING_BOOKS": [
+    11,
+    84,
+    1342,
+    1661,
+    98,
+    2701,
+    76,
+    16,
+    174,
+    345,
+    2600
+   ],
+   "HELD_OUT_BOOK": 1952,
+   "GUTENBERG_URL": "https://gutenberg.pglaf.org/cache/epub/{id}/pg{id}.txt"
+  },
+  "wall_seconds": 70.21
+ },
+ "training_books": [
+  {
+   "id": 11,
+   "title": "Alice's Adventures in Wonderland",
+   "file": "pg11.txt",
+   "sha256": "01b38ea4c710a84bc18d0bd41271a5a1a92b94e97b2812f4dece97d4a694725e",
+   "characters": 144599,
+   "words": 26525
+  },
+  {
+   "id": 84,
+   "title": "Frankenstein; or, The modern Prometheus",
+   "file": "pg84.txt",
+   "sha256": "2b97b7f8aad508649481d8dd4f6b54f9b965ddb3ba634e9151c815f537b49e42",
+   "characters": 419336,
+   "words": 75042
+  },
+  {
+   "id": 1342,
+   "title": "Pride and Prejudice",
+   "file": "pg1342.txt",
+   "sha256": "3f6bb9d6f78e0293b56acd4714dd68cb7d6d1d293402031ce9d5a216bcaf9d75",
+   "characters": 728713,
+   "words": 127360
+  },
+  {
+   "id": 1661,
+   "title": "The Adventures of Sherlock Holmes",
+   "file": "pg1661.txt",
+   "sha256": "922e2a12ccb43a4c9544c260b2166c6ad2097aeb5957faeee113f173bb857cd0",
+   "characters": 562202,
+   "words": 104506
+  },
+  {
+   "id": 98,
+   "title": "A Tale of Two Cities",
+   "file": "pg98.txt",
+   "sha256": "d54c2b80d40a40b982cd88852c6180bb944d95acdb028af3d0e01a1750681784",
+   "characters": 757604,
+   "words": 135886
+  },
+  {
+   "id": 2701,
+   "title": "Moby Dick; Or, The Whale",
+   "file": "pg2701.txt",
+   "sha256": "b5e88b71a1cda068e9ab1d94344c9d932338ba6da1a66def97a1aecd9cfcc87d",
+   "characters": 1218973,
+   "words": 212796
+  },
+  {
+   "id": 76,
+   "title": "Adventures of Huckleberry Finn",
+   "file": "pg76.txt",
+   "sha256": "d617a37aa7ae1e1a93dcde2634db2bccb86824e31e29a55230bdbf77d6872d59",
+   "characters": 571052,
+   "words": 111085
+  },
+  {
+   "id": 16,
+   "title": "Peter Pan",
+   "file": "pg16.txt",
+   "sha256": "6b08714281fe38266a756741e4c62915cda7536c2f78cca501f7fd53f3f445ae",
+   "characters": 255583,
+   "words": 47268
+  },
+  {
+   "id": 174,
+   "title": "The Picture of Dorian Gray",
+   "file": "pg174.txt",
+   "sha256": "38f36b510417177aa87a6a24c968e3ec63a447b7df36a9c1a7c5a3f2d9e51547",
+   "characters": 429312,
+   "words": 78979
+  },
+  {
+   "id": 345,
+   "title": "Dracula",
+   "file": "pg345.txt",
+   "sha256": "96cd16eacdbfebae8fdda5591f66e0cc8ee76be18e0cd1aca02bc00615782d28",
+   "characters": 845889,
+   "words": 161321
+  },
+  {
+   "id": 2600,
+   "title": "War and Peace",
+   "file": "pg2600.txt",
+   "sha256": "2d5bb2ad5f422765e714617e21fa31bbaf8958aa79682c86fca6660fcc5d1b2b",
+   "characters": 3208272,
+   "words": 563286
+  }
+ ],
+ "held_out_book": {
+  "id": 1952,
+  "title": "The Yellow Wallpaper",
+  "file": "pg1952.txt",
+  "sha256": "20c7788eeae2fe3a0efd51a1f08b6723366a4be0778d65db219149a3522651d4",
+  "characters": 31497,
+  "words": 6085
+ },
+ "training_characters": 9141555,
+ "training_words": 1644054,
+ "held_out_characters": 31497,
+ "held_out_words": 6085
+}

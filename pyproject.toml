@@ -1,0 +1,30 @@
+[project]
+name = "simplest-tokenizer"
+version = "0.1.0"
+description = "The dumbest tokenizer, then a smarter one, then the real ones: why AI can't count the r's in strawberry."
+license = "MIT"
+requires-python = ">=3.12"
+dependencies = [
+    "huggingface-hub==2.4.0",
+    "marimo==0.25.2",
+    "tiktoken==0.14.0",
+    "tokenizers==0.23.3",
+]
+
+[dependency-groups]
+dev = [
+    "pytest==9.2.0",
+]
+models = [
+    "torch==2.15.0",
+    "transformers==5.23.0",
+]
+
+[tool.uv]
+# `uv run` installs both groups by default. To skip the big torch download
+# (the tokenizers and the notebook don't need it), use `uv run --no-group models ...`.
+default-groups = ["dev", "models"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
